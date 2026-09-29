@@ -3,1984 +3,250 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bombinhas Temporada · Katiucia Cachoeira</title>
-<meta name="description" content="Casas de temporada em Bombinhas/SC. Atendimento personalizado pela corretora Katiucia Cachoeira (CRECI SC 70216F)." />
+<title>Bombinhas Temporada · Em breve</title>
+<meta name="description" content="Bombinhas Temporada · Casas de temporada em Bombinhas/SC. Site em construção. Fale conosco pelo WhatsApp." />
 <meta name="theme-color" content="#04141f" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304141f'/%3E%3Ctext x='50%25' y='55%25' font-family='Montserrat,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%2310b981' dominant-baseline='middle'%3EBT%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg-0:#04141f; --bg-1:#062238; --bg-2:#082e4a;
-    --card:rgba(9,42,66,.62); --card-2:rgba(6,34,56,.85);
-    --border:rgba(16,185,129,.22); --border-soft:rgba(255,255,255,.08);
+    --border:rgba(16,185,129,.22);
+    --border-soft:rgba(255,255,255,.08);
     --emerald:#10b981; --emerald-2:#34d399; --emerald-3:#6ee7b7;
     --aqua:#06b6d4; --aqua-2:#22d3ee;
-    --blue:#0ea5e9; --blue-2:#38bdf8;
-    --text:#e8f6f3; --muted:#94b5c7; --muted-2:#6f8fa3;
-    --danger:#f43f5e; --warn:#f59e0b; --ok:#10b981; --violet:#8b5cf6;
-    --radius:16px; --radius-sm:10px;
-    --shadow:0 18px 50px rgba(0,0,0,.4);
-    --glow:0 0 24px rgba(16,185,129,.28);
+    --text:#e8f6f3; --muted:#94b5c7;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html,body{height:100%}
   body{
     font-family:'Poppins',system-ui,sans-serif;
-    background:
-      radial-gradient(1000px 600px at 8% -10%, rgba(6,182,212,.16), transparent 60%),
-      radial-gradient(900px 500px at 100% 0%, rgba(16,185,129,.18), transparent 55%),
-      linear-gradient(160deg,#04141f 0%, #062238 45%, #041c2e 100%);
-    background-attachment:fixed;
-    color:var(--text); min-height:100vh; line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,h4,.brand-title{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:-.02em}
-  a{color:inherit;text-decoration:none}
-  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-  input,select,textarea{font-family:inherit;font-size:.95rem}
-  img{max-width:100%;display:block}
-  .container{max-width:1240px;margin:0 auto;padding:0 24px}
-
-  /* ============ HEADER ============ */
-  header.app-header{
-    position:sticky; top:0; z-index:100;
-    backdrop-filter:blur(14px);
-    background:linear-gradient(180deg, rgba(4,20,31,.92), rgba(4,20,31,.72));
-    border-bottom:1px solid var(--border-soft);
-    padding:12px 20px;
-    display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;
-  }
-  .brand{display:flex; align-items:center; gap:12px; min-width:0;cursor:pointer}
-  .brand-logo{
-    width:42px;height:42px;border-radius:12px;
-    background:conic-gradient(from 210deg, #10b981, #06b6d4, #0ea5e9, #10b981);
-    display:grid;place-items:center;font-weight:800;color:#02121c;
-    font-family:'Montserrat';font-size:1.05rem;box-shadow:var(--glow);
-    flex-shrink:0;
-  }
-  .brand-title{font-size:1.05rem;line-height:1.1;white-space:nowrap}
-  .brand-title span{background:linear-gradient(90deg,#34d399,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .brand-sub{font-size:.68rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
-  .header-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-  .header-nav{display:flex;gap:22px;align-items:center}
-  .header-nav a{font-size:.85rem;color:var(--muted);font-weight:500;transition:.2s}
-  .header-nav a:hover{color:var(--emerald-3)}
-  .global-search{
-    background:rgba(2,15,25,.55);border:1px solid var(--border-soft);
-    border-radius:999px;padding:8px 14px;color:var(--text);width:180px;
-    font-size:.82rem;transition:.2s;
-  }
-  .global-search:focus{outline:none;border-color:var(--emerald);width:220px}
-  .icon-btn{
-    width:38px;height:38px;border-radius:10px;
-    background:rgba(255,255,255,.04);border:1px solid var(--border-soft);
-    display:grid;place-items:center;font-size:1rem;transition:.2s;
-  }
-  .icon-btn:hover{background:rgba(16,185,129,.12);border-color:var(--border)}
-  .header-cta{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:9px 18px;border-radius:999px;
-    background:linear-gradient(135deg,#25D366,#128C7E);
-    color:#fff;font-weight:600;font-size:.82rem;
-    font-family:'Montserrat';
-    box-shadow:0 8px 24px rgba(37,211,102,.35);
-    transition:.25s;
-  }
-  .header-cta:hover{transform:translateY(-2px)}
-
-  /* ============ MODO: layout ============ */
-  main{padding:22px;max-width:1500px;margin:0 auto}
-  .container-wide{max-width:1500px;margin:0 auto;padding:22px}
-  .grid{display:grid;gap:18px}
-  .panel{
-    background:var(--card);backdrop-filter:blur(10px);
-    border:1px solid var(--border-soft);border-radius:var(--radius);
-    padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;
-  }
-  .panel::before{
-    content:"";position:absolute;top:0;left:0;right:0;height:1px;
-    background:linear-gradient(90deg,transparent, rgba(16,185,129,.5), rgba(6,182,212,.4), transparent);
-  }
-  .panel-title{
-    font-size:1.02rem;margin-bottom:16px;display:flex;align-items:center;gap:10px;
-    justify-content:space-between;color:#fff;
-  }
-  .panel-title > div:first-child{display:flex;align-items:center;gap:10px}
-  .panel-title .dot{width:8px;height:8px;border-radius:50%;background:var(--emerald);box-shadow:0 0 12px var(--emerald)}
-  .muted{color:var(--muted);font-size:.85rem}
-  .hidden{display:none !important}
-
-  /* ============ FORMS ============ */
-  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
-  .field label{font-size:.76rem;color:var(--muted);font-weight:500}
-  .input, select.input, textarea.input{
-    width:100%;padding:10px 14px;border-radius:var(--radius-sm);
-    background:rgba(2,15,25,.55);border:1px solid rgba(255,255,255,.09);
-    color:var(--text);outline:none;transition:.2s;font-size:.88rem;
-  }
-  .input:focus, select.input:focus, textarea.input:focus{
-    border-color:var(--emerald);box-shadow:0 0 0 3px rgba(16,185,129,.18);
-    background:rgba(2,15,25,.75);
-  }
-  select.input{cursor:pointer}
-  textarea.input{resize:vertical;min-height:70px;font-family:inherit}
-  .row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-  .row-2{grid-template-columns:1fr 1fr}
-  .row-3{grid-template-columns:repeat(3,1fr)}
-  .row-4{grid-template-columns:repeat(4,1fr)}
-
-  /* ============ BUTTONS ============ */
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    padding:10px 16px;border-radius:var(--radius-sm);
-    font-weight:600;font-size:.85rem;font-family:'Montserrat';
-    transition:.2s;letter-spacing:.01em;white-space:nowrap;
-  }
-  .btn-primary{background:linear-gradient(135deg,#10b981,#06b6d4);color:#02121c;box-shadow:0 8px 24px rgba(16,185,129,.32)}
-  .btn-primary:hover{transform:translateY(-1px)}
-  .btn-ghost{background:rgba(255,255,255,.04);border:1px solid var(--border-soft);color:var(--text)}
-  .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--border)}
-  .btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.3)}
-  .btn-wa:hover{transform:translateY(-1px)}
-  .btn-danger{background:rgba(244,63,94,.14);color:#fb7185;border:1px solid rgba(244,63,94,.3)}
-  .btn-sm{padding:6px 11px;font-size:.76rem}
-  .btn-block{width:100%}
-
-  /* ============ KPIs ============ */
-  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:20px}
-  .kpi{
-    background:linear-gradient(150deg, rgba(9,42,66,.7), rgba(6,34,56,.5));
-    border:1px solid var(--border-soft);border-radius:var(--radius);
-    padding:16px;position:relative;overflow:hidden;
-  }
-  .kpi::after{content:"";position:absolute;right:-30px;top:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle, rgba(16,185,129,.28), transparent 70%)}
-  .kpi .label{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:6px}
-  .kpi .value{font-family:'Montserrat';font-weight:700;font-size:1.6rem;color:#fff;line-height:1}
-  .kpi .value small{font-size:.8rem;color:var(--emerald-3);font-weight:500;margin-left:4px}
-  .kpi .sub{font-size:.72rem;color:var(--muted);margin-top:6px}
-
-  /* ============ TABS ============ */
-  nav.tabs{
-    display:flex;gap:6px;padding:12px 20px 0;overflow-x:auto;
-    border-bottom:1px solid var(--border-soft);scrollbar-width:none;
-  }
-  nav.tabs::-webkit-scrollbar{display:none}
-  .tab{
-    padding:10px 16px;border-radius:12px 12px 0 0;
-    color:var(--muted);font-weight:500;font-size:.85rem;
-    display:flex;align-items:center;gap:8px;white-space:nowrap;
-    border:1px solid transparent;border-bottom:none;transition:.2s;
-  }
-  .tab:hover{color:var(--text);background:rgba(255,255,255,.03)}
-  .tab.active{
-    color:var(--text);
-    background:linear-gradient(180deg, rgba(16,185,129,.14), rgba(6,182,212,.06));
-    border-color:var(--border);box-shadow:inset 0 -2px 0 var(--emerald);
-  }
-  .tab .ico{font-size:1rem}
-  .tab .count{background:rgba(16,185,129,.22);color:var(--emerald-3);font-size:.68rem;padding:1px 7px;border-radius:999px;font-weight:700}
-
-  /* ============ MOEDA STRIP ============ */
-  .currency-strip{
-    display:flex;gap:8px;padding:8px 20px;font-size:.72rem;
-    background:rgba(2,15,25,.55);border-bottom:1px solid var(--border-soft);
-    overflow-x:auto;scrollbar-width:none;
-  }
-  .currency-strip::-webkit-scrollbar{display:none}
-  .currency-chip{
-    display:inline-flex;align-items:center;gap:6px;
-    padding:4px 10px;border-radius:999px;background:rgba(16,185,129,.08);
-    border:1px solid var(--border);color:var(--emerald-3);white-space:nowrap;
-    font-family:'Montserrat';font-weight:600;font-size:.72rem;cursor:pointer;
-  }
-  .currency-chip b{color:#fff}
-
-  /* ============ IMÓVEIS ADMIN ============ */
-  .props-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-  .prop-card{background:linear-gradient(150deg, rgba(9,42,66,.7), rgba(6,34,56,.5));border:1px solid var(--border-soft);border-radius:var(--radius-sm);overflow:hidden;transition:.2s;display:flex;flex-direction:column}
-  .prop-card:hover{border-color:var(--border);transform:translateY(-2px)}
-  .prop-card .photo{height:140px;background-size:cover;background-position:center;background-color:rgba(2,15,25,.6);position:relative;display:grid;place-items:center;color:var(--muted-2);font-size:2.2rem}
-  .prop-card .photo .badge-photo{position:absolute;top:10px;left:10px;background:rgba(2,15,25,.85);border:1px solid var(--border);padding:3px 10px;border-radius:999px;font-family:'Montserrat';font-weight:700;font-size:.75rem;color:var(--emerald-3)}
-  .prop-card .body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column}
-  .prop-card h4{font-size:.98rem;margin-bottom:4px;color:#fff}
-  .prop-card .loc{font-size:.75rem;color:var(--muted);margin-bottom:10px}
-  .prop-card .stats{display:flex;gap:10px;flex-wrap:wrap;font-size:.72rem;color:var(--muted);margin-bottom:12px}
-  .prop-card .stats span{background:rgba(2,15,25,.55);padding:4px 9px;border-radius:8px;border:1px solid var(--border-soft)}
-  .prop-card .price{font-family:'Montserrat';font-weight:700;font-size:1.15rem;color:var(--emerald-3);margin-bottom:10px}
-  .prop-card .price small{font-size:.72rem;color:var(--muted);font-weight:400}
-  .prop-card .actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
-  .tag{font-size:.66rem;padding:2px 8px;border-radius:999px;background:rgba(6,182,212,.15);color:#67e8f9;font-family:'Montserrat';font-weight:600}
-
-  /* ============ TARIFAS ============ */
-  .rate-card{background:linear-gradient(150deg, rgba(9,42,66,.7), rgba(6,34,56,.5));border:1px solid var(--border-soft);border-left:4px solid var(--emerald);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:10px;transition:.2s}
-  .rate-card:hover{border-color:var(--border)}
-  .rate-card .rc-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-  .rate-card .rc-label{font-family:'Montserrat';font-weight:700;font-size:.9rem;color:#fff}
-  .rate-card .rc-price{font-family:'Montserrat';font-weight:700;color:var(--emerald-3);font-size:1rem}
-  .rate-card .rc-meta{font-size:.73rem;color:var(--muted);margin-top:6px;display:flex;gap:12px;flex-wrap:wrap}
-  .rate-card .rc-actions{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-  .priority-pill{font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:999px;background:rgba(139,92,246,.2);color:#c4b5fd;font-family:'Montserrat'}
-
-  /* ============ CALENDÁRIO ============ */
-  .cal-wrap{overflow-x:auto;border-radius:var(--radius-sm);border:1px solid var(--border-soft)}
-  table.cal{width:100%;border-collapse:collapse;font-size:.76rem;min-width:900px}
-  table.cal th, table.cal td{border:1px solid rgba(255,255,255,.05);padding:8px 6px;text-align:center;position:relative}
-  table.cal thead th{background:rgba(6,34,56,.9);color:var(--aqua-2);font-family:'Montserrat';font-weight:600;font-size:.7rem;position:sticky;top:0;z-index:2}
-  table.cal th.prop-col, table.cal td.prop-col{text-align:left;padding-left:12px;font-weight:600;color:#fff;background:rgba(4,20,31,.85);position:sticky;left:0;z-index:1;min-width:150px;font-family:'Montserrat';font-size:.78rem}
-  table.cal td.prop-col small{display:block;color:var(--muted);font-weight:400;font-size:.66rem;margin-top:2px;font-family:'Poppins'}
-  .cell-free{background:rgba(16,185,129,.14);color:var(--emerald-3);cursor:pointer}
-  .cell-free:hover{background:rgba(16,185,129,.3)}
-  .cell-busy{background:rgba(244,63,94,.18);color:#fda4af;cursor:not-allowed}
-  .cell-today{outline:2px solid var(--aqua-2);outline-offset:-2px}
-  .cell-rate-bar{position:absolute;bottom:0;left:0;right:0;height:3px}
-  .cell-weekend{background:rgba(14,165,233,.06)}
-
-  /* ============ BADGES ============ */
-  .badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.7rem;font-weight:600;font-family:'Montserrat'}
-  .b-novo{background:rgba(6,182,212,.18);color:#67e8f9}
-  .b-1contato{background:rgba(14,165,233,.18);color:#7dd3fc}
-  .b-2contato{background:rgba(139,92,246,.18);color:#c4b5fd}
-  .b-visita{background:rgba(245,158,11,.18);color:#fcd34d}
-  .b-orcamento{background:rgba(234,88,12,.18);color:#fdba74}
-  .b-reserva{background:rgba(16,185,129,.22);color:#6ee7b7}
-  .b-concretizado{background:rgba(34,197,94,.28);color:#86efac}
-  .b-perdido{background:rgba(244,63,94,.18);color:#fda4af}
-  .b-ok{background:rgba(16,185,129,.22);color:#6ee7b7}
-  .b-err{background:rgba(244,63,94,.2);color:#fda4af}
-  .b-warn{background:rgba(245,158,11,.2);color:#fcd34d}
-
-  /* ============ KANBAN ============ */
-  .kanban{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:12px;overflow-x:auto;padding-bottom:10px}
-  .kcol{background:rgba(2,15,25,.5);border:1px solid var(--border-soft);border-radius:var(--radius-sm);padding:12px;min-height:180px}
-  .kcol h4{font-size:.75rem;color:var(--aqua-2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;display:flex;justify-content:space-between}
-  .kcard{background:linear-gradient(150deg,rgba(9,42,66,.85),rgba(6,34,56,.7));border:1px solid var(--border-soft);border-radius:10px;padding:10px;margin-bottom:8px;font-size:.76rem;cursor:pointer;transition:.2s}
-  .kcard:hover{border-color:var(--emerald)}
-  .kcard .name{font-weight:600;color:#fff;font-family:'Montserrat';font-size:.8rem}
-  .kcard .info{color:var(--muted);font-size:.7rem;margin-top:4px}
-
-  /* ============ BARS ============ */
-  .bars{display:flex;flex-direction:column;gap:10px}
-  .bar-row{display:grid;grid-template-columns:110px 1fr 70px;gap:10px;align-items:center;font-size:.76rem}
-  .bar-row .lbl{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .bar-track{background:rgba(2,15,25,.7);border-radius:999px;height:10px;overflow:hidden}
-  .bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#10b981,#22d3ee);transition:width .5s}
-  .bar-row .val{text-align:right;color:var(--emerald-3);font-weight:600;font-family:'Montserrat'}
-
-  /* ============ BUDGET BOX ============ */
-  .budget-box{background:linear-gradient(150deg,rgba(2,15,25,.9),rgba(6,34,56,.7));border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;white-space:pre-wrap;font-family:'Poppins';font-size:.83rem;line-height:1.7;color:#d8ecf0;max-height:520px;overflow:auto}
-  .breakdown{background:rgba(2,15,25,.55);border:1px solid var(--border-soft);border-radius:var(--radius-sm);padding:12px 14px;margin-top:10px;font-size:.8rem}
-  .breakdown h5{font-family:'Montserrat';font-size:.75rem;color:var(--aqua-2);margin-bottom:8px;letter-spacing:.05em;text-transform:uppercase}
-  .bd-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dashed rgba(255,255,255,.06)}
-  .bd-row:last-child{border-bottom:none}
-  .bd-row span:last-child{color:var(--emerald-3);font-weight:600}
-
-  /* ============ FILTROS ============ */
-  .filter-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px;padding:12px 14px;background:rgba(2,15,25,.4);border:1px solid var(--border-soft);border-radius:var(--radius-sm)}
-  .filter-bar .input{max-width:220px}
-  .filter-bar select.input{max-width:180px}
-
-  /* ============ MODAL ============ */
-  .modal-bg{position:fixed;inset:0;background:rgba(2,10,20,.85);backdrop-filter:blur(8px);z-index:200;display:grid;place-items:center;padding:20px;overflow-y:auto}
-  .modal{background:linear-gradient(160deg,#0a2d45,#062238);border:1px solid var(--border);border-radius:var(--radius);padding:24px;max-width:680px;width:100%;max-height:90vh;overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.6)}
-  .modal h3{margin-bottom:16px;color:#fff}
-  .modal .close-x{float:right;font-size:1.3rem;color:var(--muted);cursor:pointer;line-height:1}
-
-  /* ============ TOAST ============ */
-  .toast{position:fixed;bottom:24px;right:24px;z-index:300;background:linear-gradient(135deg,#10b981,#06b6d4);color:#02121c;padding:14px 20px;border-radius:12px;font-weight:600;font-family:'Montserrat';font-size:.85rem;box-shadow:0 12px 40px rgba(16,185,129,.45);transform:translateY(100px);opacity:0;transition:.3s;max-width:340px}
-  .toast.show{transform:translateY(0);opacity:1}
-  .toast.error{background:linear-gradient(135deg,#f43f5e,#e11d48);color:#fff}
-  .toast.warn{background:linear-gradient(135deg,#f59e0b,#d97706);color:#1a0d00}
-
-  /* ============ ALERT ============ */
-  .alert-box{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.35);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:16px;display:flex;gap:10px;font-size:.82rem}
-
-  /* ============ LANG TOGGLE ============ */
-  .lang-toggle{display:inline-flex;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--border-soft)}
-  .lang-toggle button{padding:8px 14px;font-size:.78rem;font-weight:600;font-family:'Montserrat';background:rgba(2,15,25,.55);color:var(--muted);transition:.2s}
-  .lang-toggle button.active{background:linear-gradient(135deg,#10b981,#06b6d4);color:#02121c}
-
-  /* ============ VITRINE ============ */
-  .public-hero{
-    position:relative;min-height:80vh;
+    background:#04141f;
+    color:var(--text); line-height:1.6;
     display:flex;align-items:center;justify-content:center;
-    padding:60px 24px;
-    overflow:hidden;isolation:isolate;
+    min-height:100vh;padding:24px;
+    -webkit-font-smoothing:antialiased;
+    overflow:hidden;position:relative;
   }
-  .public-hero-bg{
-    position:absolute;inset:0;z-index:-2;
+  /* Aurora animada ao fundo */
+  body::before{
+    content:"";position:absolute;inset:-20%;z-index:0;
     background:
-      radial-gradient(900px 700px at 15% 20%, rgba(6,182,212,.28), transparent 60%),
-      radial-gradient(800px 600px at 85% 30%, rgba(16,185,129,.30), transparent 55%);
-    animation:aurora 18s ease-in-out infinite alternate;
+      radial-gradient(700px 500px at 20% 25%, rgba(6,182,212,.28), transparent 60%),
+      radial-gradient(700px 500px at 80% 75%, rgba(16,185,129,.30), transparent 60%),
+      radial-gradient(900px 700px at 50% 50%, rgba(14,165,233,.15), transparent 65%);
+    animation:aurora 20s ease-in-out infinite alternate;
+    pointer-events:none;
   }
   @keyframes aurora{
-    0%{transform:scale(1)}
-    100%{transform:scale(1.08) translate(-2%,2%);filter:hue-rotate(12deg)}
+    0%{transform:scale(1) rotate(0deg);filter:hue-rotate(0deg)}
+    100%{transform:scale(1.15) rotate(6deg);filter:hue-rotate(15deg)}
   }
-  .public-hero-content{
-    max-width:960px;width:100%;
-    display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;
+  /* Grade de pontos decorativa */
+  body::after{
+    content:"";position:absolute;inset:0;z-index:0;
+    background-image:
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(circle at 50% 50%, black 20%, transparent 75%);
+    -webkit-mask-image:radial-gradient(circle at 50% 50%, black 20%, transparent 75%);
+    opacity:.5;pointer-events:none;
   }
-  .hero-tag{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:8px 16px;border-radius:999px;
-    background:rgba(16,185,129,.12);border:1px solid var(--border);
-    color:var(--emerald-3);font-size:.78rem;font-weight:600;
-    font-family:'Montserrat';letter-spacing:.08em;text-transform:uppercase;
-    margin-bottom:24px;
-  }
-  .hero-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--emerald);box-shadow:0 0 12px var(--emerald);animation:pulse 2s ease-in-out infinite}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
-  .public-hero h1{font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.08;font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:20px}
-  .public-hero h1 em{font-style:normal;background:linear-gradient(120deg,#34d399 0%,#22d3ee 50%,#38bdf8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .public-hero p.lead{font-size:1.05rem;color:var(--muted);line-height:1.7;margin-bottom:32px;max-width:520px}
-  .public-hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
-  .public-hero-ctas .btn{padding:14px 28px;border-radius:999px;font-size:.9rem}
-  .hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--border-soft)}
-  .hero-stat-num{font-family:'Montserrat';font-weight:800;font-size:1.6rem;background:linear-gradient(120deg,#34d399,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
-  .hero-stat-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-top:6px}
 
-  .hero-video{
-    position:relative;aspect-ratio:9/13;max-width:360px;width:100%;
-    border-radius:24px;overflow:hidden;
-    background:linear-gradient(150deg,rgba(9,42,66,.9),rgba(6,34,56,.7));
+  .card{
+    position:relative;z-index:1;
+    max-width:560px;width:100%;
+    background:linear-gradient(160deg, rgba(9,42,66,.75), rgba(6,34,56,.55));
+    backdrop-filter:blur(20px);
     border:1px solid var(--border);
-    box-shadow:0 30px 80px rgba(0,0,0,.6),var(--glow);
-    margin-left:auto;
+    border-radius:28px;
+    padding:56px 44px 44px;
+    text-align:center;
+    box-shadow:0 30px 80px rgba(0,0,0,.55), 0 0 60px rgba(16,185,129,.18);
+    animation:fadeUp .9s cubic-bezier(.2,.9,.3,1) both;
   }
-  .hero-video iframe,.hero-video video,.hero-video img{width:100%;height:100%;object-fit:cover;border:0}
-  .hero-video-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:30px;text-align:center;color:var(--muted)}
-  .hero-video-placeholder .video-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#10b981,#06b6d4);display:grid;place-items:center;color:#02121c;font-size:1.8rem;box-shadow:0 0 40px rgba(16,185,129,.5);animation:pulse 2.4s ease-in-out infinite}
-  .hero-video-placeholder strong{color:#fff;font-family:'Montserrat';font-size:.92rem}
-
-  .public-section{padding:80px 0;position:relative}
-  .public-section-head{text-align:center;max-width:720px;margin:0 auto 50px}
-  .section-tag{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(16,185,129,.12);border:1px solid var(--border);color:var(--emerald-3);font-size:.72rem;font-weight:600;font-family:'Montserrat';letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
-  .public-section h2{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
-  .public-section h2 em{font-style:normal;background:linear-gradient(120deg,#34d399,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .public-section .desc{font-size:1rem;color:var(--muted);line-height:1.7}
-
-  .filters-public{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
-  .filter-chip{padding:9px 18px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border-soft);font-size:.82rem;color:var(--muted);transition:.25s}
-  .filter-chip:hover{color:var(--text);border-color:var(--border)}
-  .filter-chip.active{background:linear-gradient(135deg,rgba(16,185,129,.2),rgba(6,182,212,.2));border-color:var(--emerald);color:var(--emerald-3)}
-
-  .public-props-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:26px}
-  .public-prop-card{
-    background:linear-gradient(155deg,rgba(9,42,66,.6),rgba(6,34,56,.4));
-    border:1px solid var(--border-soft);border-radius:20px;overflow:hidden;
-    transition:.4s cubic-bezier(.2,.9,.3,1);cursor:pointer;
-    display:flex;flex-direction:column;position:relative;
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(30px) scale(.98)}
+    to{opacity:1;transform:translateY(0) scale(1)}
   }
-  .public-prop-card:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 40px rgba(16,185,129,.15)}
-  .public-prop-cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(150deg,#0a2d45,#062238)}
-  .public-prop-cover img{width:100%;height:100%;object-fit:cover;transition:.6s cubic-bezier(.2,.9,.3,1)}
-  .public-prop-card:hover .public-prop-cover img{transform:scale(1.08)}
-  .public-prop-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(4,20,31,.9));pointer-events:none}
-  .public-prop-code{position:absolute;top:14px;left:14px;z-index:2;background:rgba(4,20,31,.9);backdrop-filter:blur(10px);border:1px solid var(--border);padding:5px 12px;border-radius:999px;font-family:'Montserrat';font-weight:700;font-size:.7rem;color:var(--emerald-3);letter-spacing:.08em}
-  .public-prop-feat{position:absolute;top:14px;right:14px;z-index:2;background:linear-gradient(135deg,#f59e0b,#d97706);color:#1a0d00;padding:5px 12px;border-radius:999px;font-family:'Montserrat';font-weight:700;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase}
-  .public-prop-info{position:absolute;bottom:14px;left:14px;right:14px;z-index:2;color:#fff}
-  .public-prop-info h3{font-size:1.1rem;font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.6)}
-  .public-prop-info p{font-size:.76rem;color:rgba(232,246,243,.85);margin-top:2px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
-  .public-prop-body{padding:20px;flex:1;display:flex;flex-direction:column}
-  .public-prop-body .desc-short{font-size:.85rem;color:var(--muted);line-height:1.65;margin-bottom:16px;flex:1}
-  .public-prop-features{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-  .public-prop-features span{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:999px;background:rgba(2,15,25,.6);border:1px solid var(--border-soft);font-size:.72rem;color:var(--muted)}
-  .public-prop-actions{display:flex;gap:8px;padding-top:16px;border-top:1px solid var(--border-soft)}
-  .public-prop-actions .btn{flex:1;padding:11px 14px;font-size:.8rem}
-
-  .about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center;max-width:1240px;margin:0 auto;padding:0 24px}
-  .about-photo-wrap{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;border:1px solid var(--border);box-shadow:0 30px 70px rgba(0,0,0,.5);background:#062238}
-  .about-photo-wrap img{width:100%;height:100%;object-fit:cover}
-  .about-photo-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(4,20,31,.7))}
-  .about-badge{position:absolute;bottom:20px;left:20px;right:20px;z-index:2;background:rgba(4,20,31,.85);backdrop-filter:blur(14px);border:1px solid var(--border);border-radius:14px;padding:14px 18px}
-  .about-badge .creci{font-family:'Montserrat';font-weight:700;font-size:.78rem;color:var(--emerald-3)}
-  .about-badge .name{font-family:'Montserrat';font-weight:800;font-size:1rem;color:#fff;margin-top:2px}
-  .about-content h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:18px;letter-spacing:-.02em}
-  .about-content h2 em{font-style:normal;background:linear-gradient(120deg,#34d399,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .about-content p{color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:16px}
-  .about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
-  .highlight-card{background:rgba(2,15,25,.5);border:1px solid var(--border-soft);border-radius:var(--radius-sm);padding:16px;transition:.25s}
-  .highlight-card:hover{border-color:var(--border);transform:translateY(-3px)}
-  .highlight-icon{font-size:1.4rem;margin-bottom:8px}
-  .highlight-title{font-family:'Montserrat';font-weight:700;font-size:.88rem;color:#fff;margin-bottom:4px}
-  .highlight-desc{font-size:.76rem;color:var(--muted);line-height:1.5}
-
-  .cta-public{
-    position:relative;border-radius:26px;padding:70px 30px;text-align:center;
-    background:
-      radial-gradient(circle at 20% 20%,rgba(16,185,129,.25),transparent 50%),
-      radial-gradient(circle at 80% 80%,rgba(6,182,212,.25),transparent 50%),
-      linear-gradient(155deg,rgba(9,42,66,.85),rgba(6,34,56,.7));
-    border:1px solid var(--border);
-    box-shadow:0 30px 80px rgba(0,0,0,.5),var(--glow);
-    max-width:1100px;margin:0 auto;
+  .card::before{
+    content:"";position:absolute;top:0;left:10%;right:10%;height:1px;
+    background:linear-gradient(90deg,transparent, rgba(16,185,129,.6), rgba(6,182,212,.5), transparent);
   }
-  .cta-public h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px;letter-spacing:-.02em}
-  .cta-public h2 em{font-style:normal;background:linear-gradient(120deg,#34d399,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .cta-public p{font-size:1rem;color:var(--muted);max-width:560px;margin:0 auto 30px;line-height:1.7}
-  .cta-public-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .cta-public-buttons .btn{padding:14px 26px;border-radius:999px}
 
-  footer.public-footer{background:#020c14;border-top:1px solid var(--border-soft);padding:50px 0 24px;margin-top:60px}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;max-width:1240px;margin-left:auto;margin-right:auto;padding:0 24px}
-  .footer-col h4{font-size:.74rem;color:var(--emerald-3);letter-spacing:.14em;text-transform:uppercase;font-family:'Montserrat';font-weight:700;margin-bottom:16px}
-  .footer-col p,.footer-col a{color:var(--muted);font-size:.85rem;line-height:1.9;transition:.2s;display:block}
-  .footer-col a:hover{color:var(--emerald-3)}
-  .footer-brand-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-  .footer-bottom{border-top:1px solid var(--border-soft);padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.75rem;color:var(--muted);max-width:1240px;margin:0 auto;padding-left:24px;padding-right:24px}
-
-  .wa-float{
-    position:fixed;bottom:22px;right:22px;z-index:90;
-    width:60px;height:60px;border-radius:50%;
-    background:linear-gradient(135deg,#25D366,#128C7E);
+  .logo{
+    width:76px;height:76px;margin:0 auto 22px;
+    border-radius:22px;
+    background:conic-gradient(from 210deg, #10b981, #06b6d4, #0ea5e9, #10b981);
     display:grid;place-items:center;
-    box-shadow:0 12px 32px rgba(37,211,102,.5);
-    animation:waPulse 2.4s ease-out infinite;transition:.25s;
+    font-family:'Montserrat';font-weight:800;font-size:1.7rem;
+    color:#02121c;
+    box-shadow:0 0 44px rgba(16,185,129,.5);
+    animation:float 4s ease-in-out infinite;
   }
-  .wa-float:hover{transform:scale(1.08)}
-  .wa-float svg{width:30px;height:30px;fill:#fff}
-  @keyframes waPulse{
-    0%{box-shadow:0 12px 32px rgba(37,211,102,.5),0 0 0 0 rgba(37,211,102,.6)}
-    70%{box-shadow:0 12px 32px rgba(37,211,102,.5),0 0 0 20px rgba(37,211,102,0)}
-    100%{box-shadow:0 12px 32px rgba(37,211,102,.5),0 0 0 0 rgba(37,211,102,0)}
+  @keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-6px)}
   }
 
-  /* ============ MODAL PÚBLICO ============ */
-  .pub-modal-gallery{position:relative;aspect-ratio:16/9;background:#02121c;overflow:hidden;border-radius:24px 24px 0 0}
-  .pub-modal-gallery img{width:100%;height:100%;object-fit:cover}
-  .pub-gallery-thumbs{display:flex;gap:8px;padding:14px 24px;overflow-x:auto;scrollbar-width:thin}
-  .pub-gallery-thumbs::-webkit-scrollbar{height:6px}
-  .pub-gallery-thumbs::-webkit-scrollbar-thumb{background:var(--emerald);border-radius:3px}
-  .pub-thumb{flex-shrink:0;width:80px;height:58px;border-radius:8px;overflow:hidden;border:2px solid transparent;cursor:pointer;transition:.2s;background:#02121c}
-  .pub-thumb.active{border-color:var(--emerald);box-shadow:0 0 16px rgba(16,185,129,.5)}
-  .pub-thumb img{width:100%;height:100%;object-fit:cover}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 16px;border-radius:999px;
+    background:rgba(16,185,129,.12);
+    border:1px solid var(--border);
+    color:var(--emerald-3);font-size:.72rem;font-weight:600;
+    font-family:'Montserrat';letter-spacing:.14em;text-transform:uppercase;
+    margin-bottom:22px;
+  }
+  .badge .dot{
+    width:8px;height:8px;border-radius:50%;background:var(--emerald);
+    box-shadow:0 0 12px var(--emerald);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1;transform:scale(1)}
+    50%{opacity:.6;transform:scale(1.35)}
+  }
 
-  /* ============ RESPONSIVO ============ */
-  @media (max-width:1024px){
-    .public-hero-content{grid-template-columns:1fr;gap:40px;text-align:center}
-    .public-hero p.lead{margin-left:auto;margin-right:auto}
-    .public-hero-ctas{justify-content:center}
-    .hero-stats{justify-content:center}
-    .hero-video{margin:0 auto}
-    .about-grid{grid-template-columns:1fr;gap:40px}
-    .about-photo-wrap{max-width:400px;margin:0 auto}
-    .footer-grid{grid-template-columns:1fr 1fr}
+  h1{
+    font-family:'Montserrat';font-weight:800;
+    font-size:clamp(1.6rem,4.5vw,2.1rem);
+    line-height:1.15;letter-spacing:-.02em;
+    color:#fff;margin-bottom:14px;
   }
-  @media (max-width:768px){
-    .header-nav{display:none}
-    .header-cta{display:none}
-    .container{padding:0 16px}
-    .container-wide{padding:16px}
-    main{padding:16px}
-    header.app-header{padding:10px 14px}
-    nav.tabs{padding:10px 14px 0}
-    .currency-strip{padding:8px 14px}
-    .panel{padding:16px}
-    .row-3,.row-4{grid-template-columns:1fr 1fr}
-    .public-hero{padding:40px 16px;min-height:auto}
-    .public-hero h1{font-size:1.9rem}
-    .public-hero-ctas .btn{width:100%}
-    .hero-stats{gap:20px}
-    .hero-stat-num{font-size:1.4rem}
-    .public-props-grid{grid-template-columns:1fr}
-    .about-highlights{grid-template-columns:1fr}
-    .public-section{padding:60px 0}
-    .cta-public{padding:50px 20px}
-    .footer-grid{grid-template-columns:1fr;gap:30px}
-    .footer-bottom{flex-direction:column;text-align:center}
-    .global-search{width:140px}
-    .global-search:focus{width:180px}
-    .pub-modal-gallery{aspect-ratio:4/3}
-    .modal{padding:18px}
+  h1 em{
+    font-style:normal;
+    background:linear-gradient(120deg,#34d399 0%,#22d3ee 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;
   }
-  @media (max-width:480px){
-    .brand-title{font-size:.95rem}
-    .tab{padding:8px 11px;font-size:.78rem}
-    .tab .lbl{display:none}
-    .kpis{grid-template-columns:1fr 1fr}
-    .kpi{padding:12px}
-    .kpi .value{font-size:1.2rem}
-    .row-2,.row-3,.row-4{grid-template-columns:1fr}
-    .props-grid{grid-template-columns:1fr}
-    .wa-float{width:52px;height:52px;bottom:16px;right:16px}
-    .wa-float svg{width:26px;height:26px}
+  p.lead{
+    color:var(--muted);font-size:.98rem;line-height:1.75;
+    margin-bottom:30px;max-width:400px;margin-left:auto;margin-right:auto;
   }
-  ::-webkit-scrollbar{width:10px;height:10px}
-  ::-webkit-scrollbar-track{background:rgba(2,15,25,.4)}
-  ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#10b981,#06b6d4);border-radius:10px}
+
+  .divider{
+    display:flex;align-items:center;gap:14px;
+    margin:26px 0 24px;
+    color:var(--muted);font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;font-family:'Montserrat';font-weight:600;
+  }
+  .divider::before,.divider::after{
+    content:"";flex:1;height:1px;
+    background:linear-gradient(90deg,transparent, rgba(255,255,255,.15), transparent);
+  }
+
+  .btn-wa{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    width:100%;padding:16px 24px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#25D366,#128C7E);
+    color:#fff;font-weight:700;font-size:.95rem;
+    font-family:'Montserrat';letter-spacing:.01em;
+    text-decoration:none;
+    box-shadow:0 12px 32px rgba(37,211,102,.4);
+    transition:.3s;
+    position:relative;overflow:hidden;
+  }
+  .btn-wa:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(37,211,102,.55)}
+  .btn-wa svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
+
+  .btn-insta{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    width:100%;padding:15px 24px;margin-top:12px;
+    border-radius:14px;
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--border-soft);
+    color:var(--text);font-weight:600;font-size:.9rem;
+    font-family:'Montserrat';text-decoration:none;
+    transition:.3s;
+  }
+  .btn-insta:hover{background:rgba(255,255,255,.08);border-color:var(--border);transform:translateY(-2px)}
+  .btn-insta svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+
+  .footer-info{
+    margin-top:28px;padding-top:22px;
+    border-top:1px solid var(--border-soft);
+    font-size:.75rem;color:var(--muted);line-height:1.9;
+  }
+  .footer-info strong{
+    color:var(--emerald-3);font-family:'Montserrat';font-weight:700;
+    letter-spacing:.06em;
+  }
+
+  /* Elementos flutuantes decorativos */
+  .float-deco{
+    position:absolute;z-index:0;pointer-events:none;
+    font-size:2rem;opacity:.15;
+    animation:floatSlow 8s ease-in-out infinite;
+  }
+  .float-deco.d1{top:12%;left:8%;animation-delay:0s}
+  .float-deco.d2{bottom:15%;right:10%;animation-delay:-3s}
+  .float-deco.d3{top:60%;left:5%;animation-delay:-5s;font-size:1.6rem}
+  @keyframes floatSlow{
+    0%,100%{transform:translateY(0) rotate(0deg);opacity:.15}
+    50%{transform:translateY(-18px) rotate(8deg);opacity:.28}
+  }
+
+  @media (max-width:600px){
+    body{padding:16px;overflow-y:auto}
+    .card{padding:44px 26px 34px;border-radius:24px}
+    .logo{width:66px;height:66px;font-size:1.5rem}
+    h1{font-size:1.45rem}
+    p.lead{font-size:.9rem}
+    .float-deco{display:none}
+  }
 </style>
 </head>
 <body>
 
-<!-- =================== HEADER =================== -->
-<header class="app-header">
-  <div class="brand" onclick="scrollTop()">
-    <div class="brand-logo">BT</div>
-    <div>
-      <div class="brand-title">Bombinhas<span>Temporada</span>.com.br</div>
-      <div class="brand-sub">Katiucia Cachoeira · CRECI SC 70216F</div>
+  <!-- Elementos decorativos -->
+  <span class="float-deco d1">🏖️</span>
+  <span class="float-deco d2">🌊</span>
+  <span class="float-deco d3">✨</span>
+
+  <main class="card">
+    <div class="logo">BT</div>
+
+    <div class="badge">
+      <span class="dot"></span>
+      Em construção
     </div>
-  </div>
 
-  <!-- HEADER MODO PÚBLICO -->
-  <div class="header-tools" id="header-public">
-    <nav class="header-nav">
-      <a href="#public-props">Imóveis</a>
-      <a href="#public-about">Sobre</a>
-      <a href="#public-contact">Contato</a>
-    </nav>
-    <a href="#" class="header-cta" onclick="openWhatsGeneral(event)">💬 Consultar</a>
-    <button class="icon-btn" title="Área do corretor" onclick="promptAdmin()">🔒</button>
-  </div>
+    <h1>Estamos preparando<br>algo <em>especial</em> para você</h1>
 
-  <!-- HEADER MODO ADMIN -->
-  <div class="header-tools hidden" id="header-admin">
-    <input class="global-search" id="global-search" placeholder="🔍 Buscar..." oninput="globalSearch(this.value)">
-    <button class="icon-btn" title="Ver site" onclick="setMode('public')">👁️</button>
-    <button class="icon-btn" title="Configurações" onclick="openSettings()">⚙️</button>
-    <button class="icon-btn" title="Backup" onclick="exportBackup()">💾</button>
-    <button class="icon-btn" title="Importar" onclick="importBackup()">📂</button>
-    <button class="icon-btn" title="Bloquear" onclick="lockAdmin()">🔓</button>
-  </div>
-</header>
+    <p class="lead">
+      Nosso novo site está sendo criado com muito cuidado para mostrar 
+      as melhores casas de temporada em Bombinhas. 
+      Enquanto isso, fale comigo pelo WhatsApp!
+    </p>
 
-<!-- =================== MODO PÚBLICO =================== -->
-<div id="public-view">
+    <a 
+      href="https://wa.me/5547991375505?text=Ol%C3%A1%20Katiucia!%20Vim%20pelo%20site%20BombinhasTemporada.com.br%20e%20gostaria%20de%20saber%20sobre%20as%20casas%20de%20temporada.%20%F0%9F%98%8A" 
+      target="_blank" 
+      rel="noopener"
+      class="btn-wa">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar no WhatsApp agora
+    </a>
 
-  <!-- HERO -->
-  <section class="public-hero" id="public-hero">
-    <div class="public-hero-bg"></div>
-    <div class="container public-hero-content">
-      <div>
-        <div class="hero-tag"><span class="pulse"></span> Temporada em Bombinhas/SC</div>
-        <h1>Sua casa de <em>temporada</em><br>em Bombinhas começa aqui</h1>
-        <p class="lead">Casas selecionadas com piscina, área gourmet e localização privilegiada. Atendimento personalizado do primeiro contato ao check-out.</p>
-        <div class="public-hero-ctas">
-          <a href="#public-props" class="btn btn-primary">🏠 Ver imóveis</a>
-          <a href="#" class="btn btn-wa" onclick="openWhatsGeneral(event)">💬 Falar no WhatsApp</a>
-        </div>
-        <div class="hero-stats">
-          <div><div class="hero-stat-num" id="stat-props">0</div><div class="hero-stat-label">Imóveis disponíveis</div></div>
-          <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Atendimento pessoal</div></div>
-          <div><div class="hero-stat-num">CRECI</div><div class="hero-stat-label">SC 70216F</div></div>
-        </div>
-      </div>
-      <div class="hero-video">
-        <!-- ═══ TROQUE O BLOCO ABAIXO PELO SEU VÍDEO ═══
-             YouTube: <iframe src="https://www.youtube.com/embed/SEU_ID" allowfullscreen></iframe>
-             MP4: <video src="video.mp4" controls poster="capa.jpg"></video>
-             Foto: <img src="foto-katiucia.jpg" alt="Katiucia">
-        -->
-        <div class="hero-video-placeholder">
-          <div class="video-icon">▶</div>
-          <strong>Vídeo de apresentação</strong>
-          <span>Substitua este bloco pelo seu vídeo</span>
-        </div>
-      </div>
+    <a 
+      href="https://instagram.com/katiuciabombinhas" 
+      target="_blank" 
+      rel="noopener"
+      class="btn-insta">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      @katiuciabombinhas
+    </a>
+
+    <div class="footer-info">
+      <strong>KATIUCIA CACHOEIRA</strong><br>
+      Corretora de Imóveis · CRECI SC 70216F<br>
+      Bombinhas · Santa Catarina
     </div>
-  </section>
-
-  <!-- IMÓVEIS -->
-  <section class="public-section" id="public-props">
-    <div class="container">
-      <div class="public-section-head">
-        <div class="section-tag">Nossos imóveis</div>
-        <h2>Casas para você se sentir <em>em casa</em></h2>
-        <p class="desc">Cada casa foi escolhida a dedo para oferecer o melhor da temporada em Bombinhas. Clique em qualquer imóvel para ver mais detalhes e consultar disponibilidade.</p>
-      </div>
-      <div class="filters-public" id="filters-public"></div>
-      <div class="public-props-grid" id="public-props-grid"></div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section class="public-section" id="public-about" style="background:linear-gradient(180deg,rgba(6,34,56,.3),transparent)">
-    <div class="about-grid">
-      <div class="about-photo-wrap">
-        <!-- Troque pela foto da Katiucia -->
-        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" alt="Katiucia Cachoeira">
-        <div class="about-badge">
-          <div class="creci">CRECI SC 70216F</div>
-          <div class="name">Katiucia Cachoeira</div>
-        </div>
-      </div>
-      <div class="about-content">
-        <div class="section-tag">Quem te atende</div>
-        <h2>Muito prazer, sou a <em>Katiucia</em></h2>
-        <p>Corretora de imóveis em Bombinhas, apaixonada por transformar viagens em memórias. Atendo cada hóspede pessoalmente, do primeiro contato ao check-out, garantindo que sua experiência seja tranquila, segura e inesquecível.</p>
-        <p>Trabalho com casas selecionadas em Bombinhas e região, sempre priorizando conforto, localização e aquele toque especial que faz toda a diferença.</p>
-        <div class="about-highlights">
-          <div class="highlight-card"><div class="highlight-icon">🏖️</div><div class="highlight-title">Especialista local</div><div class="highlight-desc">Conheço cada canto de Bombinhas</div></div>
-          <div class="highlight-card"><div class="highlight-icon">💬</div><div class="highlight-title">Atendimento direto</div><div class="highlight-desc">Você fala comigo, sem intermediários</div></div>
-          <div class="highlight-card"><div class="highlight-icon">🤝</div><div class="highlight-title">Confiança total</div><div class="highlight-desc">Contrato e condições transparentes</div></div>
-          <div class="highlight-card"><div class="highlight-icon">✨</div><div class="highlight-title">Curadoria pessoal</div><div class="highlight-desc">Cada casa foi visitada por mim</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA + CONTATO -->
-  <section class="public-section" id="public-contact">
-    <div class="container">
-      <div class="cta-public">
-        <h2>Pronto para <em>reservar</em> sua temporada?</h2>
-        <p>Me chame no WhatsApp e eu te ajudo a encontrar a casa perfeita para o seu grupo. Consulto disponibilidade, envio orçamento e cuido de todos os detalhes.</p>
-        <div class="cta-public-buttons">
-          <a href="#" class="btn btn-wa" onclick="openWhatsGeneral(event)">💬 Falar com Katiucia</a>
-          <a href="https://instagram.com/katiuciabombinhas" target="_blank" rel="noopener" class="btn btn-ghost">📷 @katiuciabombinhas</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="public-footer">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="footer-brand-row">
-          <div class="brand-logo" style="width:38px;height:38px;font-size:1rem">BT</div>
-          <div>
-            <div class="brand-title" style="font-size:.95rem">Bombinhas<span>Temporada</span></div>
-            <div class="brand-sub" style="font-size:.62rem">Casas em Bombinhas/SC</div>
-          </div>
-        </div>
-        <p style="max-width:320px">Casas de temporada selecionadas em Bombinhas. Atendimento personalizado pela corretora Katiucia Cachoeira.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navegação</h4>
-        <a href="#public-props">Imóveis</a>
-        <a href="#public-about">Sobre</a>
-        <a href="#public-contact">Contato</a>
-      </div>
-      <div class="footer-col">
-        <h4>Contato</h4>
-        <a href="#" onclick="openWhatsGeneral(event)">💬 (47) 99137-5505</a>
-        <a href="https://instagram.com/katiuciabombinhas" target="_blank" rel="noopener">📷 @katiuciabombinhas</a>
-        <p style="margin-top:10px">📍 Bombinhas, Santa Catarina</p>
-        <p>CRECI SC 70216F</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div>© <span id="year"></span> Bombinhas Temporada. Todos os direitos reservados.</div>
-      <div>Feito com 💚 em Bombinhas/SC</div>
-    </div>
-  </footer>
-</div>
-
-<!-- =================== MODO ADMIN =================== -->
-<div id="admin-view" class="hidden">
-  <div class="currency-strip" id="currency-strip"></div>
-  <nav class="tabs" id="tabs">
-    <button class="tab active" data-tab="dashboard"><span class="ico">📊</span><span class="lbl">Painel</span></button>
-    <button class="tab" data-tab="imoveis"><span class="ico">🏠</span><span class="lbl">Imóveis</span><span class="count" id="cnt-imoveis">0</span></button>
-    <button class="tab" data-tab="tarifas"><span class="ico">🏷️</span><span class="lbl">Tarifas</span></button>
-    <button class="tab" data-tab="calendario"><span class="ico">📅</span><span class="lbl">Disponibilidade</span></button>
-    <button class="tab" data-tab="orcamento"><span class="ico">💰</span><span class="lbl">Orçamento</span></button>
-    <button class="tab" data-tab="crm"><span class="ico">🎯</span><span class="lbl">CRM</span><span class="count" id="cnt-leads">0</span></button>
-    <button class="tab" data-tab="contrato"><span class="ico">📝</span><span class="lbl">Contrato</span></button>
-  </nav>
-  <main>
-
-    <section id="tab-dashboard" class="tab-panel">
-      <div id="alert-checkins"></div>
-      <div class="kpis" id="kpis"></div>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(330px,1fr))">
-        <div class="panel"><div class="panel-title"><div><span class="dot"></span>Receita por Origem</div></div><div class="bars" id="chart-origem"></div></div>
-        <div class="panel"><div class="panel-title"><div><span class="dot"></span>Leads por Status</div></div><div class="bars" id="chart-status"></div></div>
-        <div class="panel"><div class="panel-title"><div><span class="dot"></span>Receita por Imóvel</div></div><div class="bars" id="chart-imovel"></div></div>
-        <div class="panel"><div class="panel-title"><div><span class="dot"></span>Últimos Atendimentos</div></div><div id="ultimos-leads"></div></div>
-      </div>
-    </section>
-
-    <section id="tab-imoveis" class="tab-panel hidden">
-      <div class="grid" style="grid-template-columns:minmax(320px,420px) 1fr">
-        <div class="panel">
-          <div class="panel-title"><div><span class="dot"></span><span id="form-prop-title">Cadastrar Imóvel</span></div></div>
-          <input type="hidden" id="im-id">
-          <div class="row row-2">
-            <div class="field"><label>Código *</label><input class="input" id="im-code" placeholder="ONIX"></div>
-            <div class="field"><label>Nome *</label><input class="input" id="im-name" placeholder="Casa Ônix"></div>
-          </div>
-          <div class="row row-2">
-            <div class="field"><label>Bairro</label><input class="input" id="im-neighborhood" placeholder="Mariscal" list="bairros-list"><datalist id="bairros-list"></datalist></div>
-            <div class="field"><label>Localização completa</label><input class="input" id="im-local" placeholder="Mariscal, Bombinhas/SC"></div>
-          </div>
-          <div class="field"><label>Foto de capa (URL)</label><input class="input" id="im-photo" placeholder="https://..."></div>
-          <div class="field"><label>Galeria de fotos (uma URL por linha)</label><textarea class="input" id="im-gallery" placeholder="https://foto1.jpg&#10;https://foto2.jpg"></textarea></div>
-          <div class="row row-3">
-            <div class="field"><label>Diária base (R$) *</label><input class="input" id="im-price" type="number" placeholder="600"></div>
-            <div class="field"><label>Taxa Limpeza (R$)</label><input class="input" id="im-clean" type="number" placeholder="300"></div>
-            <div class="field"><label>Capacidade</label><input class="input" id="im-cap" type="number" placeholder="10"></div>
-          </div>
-          <div class="row row-4">
-            <div class="field"><label>Quartos</label><input class="input" id="im-bedrooms" type="number" placeholder="3"></div>
-            <div class="field"><label>Banheiros</label><input class="input" id="im-bathrooms" type="number" placeholder="2"></div>
-            <div class="field"><label>Garagem</label><input class="input" id="im-parking" type="number" placeholder="2"></div>
-            <div class="field"><label>Mín. noites</label><input class="input" id="im-min" type="number" value="2"></div>
-          </div>
-          <div class="field"><label>Tags (vírgula)</label><input class="input" id="im-tags" placeholder="piscina, luxo"></div>
-          <div class="field"><label>Comodidades (uma por linha)</label><textarea class="input" id="im-amenities" placeholder="Piscina privativa&#10;Churrasqueira&#10;Wi-Fi"></textarea></div>
-          <div class="field"><label>Descrição curta (card)</label><input class="input" id="im-short" placeholder="Piscina privativa, sinuca e suíte master."></div>
-          <div class="field"><label>Descrição longa (modal)</label><textarea class="input" id="im-desc" placeholder="Texto completo para o modal..."></textarea></div>
-          <label style="display:flex;gap:8px;align-items:center;margin-bottom:14px;font-size:.85rem">
-            <input type="checkbox" id="im-featured"> Destacar como "★ Destaque" na vitrine
-          </label>
-          <div style="display:flex;gap:8px">
-            <button class="btn btn-primary" style="flex:1" onclick="saveProperty()" id="btn-save-prop">➕ Adicionar</button>
-            <button class="btn btn-ghost" onclick="clearPropertyForm()" id="btn-cancel-prop" style="display:none">Cancelar</button>
-          </div>
-        </div>
-        <div class="panel">
-          <div class="filter-bar">
-            <input class="input" id="filter-props" placeholder="🔍 Buscar..." oninput="renderProperties()">
-            <select class="input" id="filter-neighborhood" onchange="renderProperties()"><option value="">Todos os bairros</option></select>
-            <select class="input" id="sort-props" onchange="renderProperties()">
-              <option value="code">Código</option><option value="name">Nome</option>
-              <option value="price-asc">Menor diária</option><option value="price-desc">Maior diária</option>
-            </select>
-          </div>
-          <div id="lista-imoveis" class="props-grid"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="tab-tarifas" class="tab-panel hidden">
-      <div class="grid" style="grid-template-columns:minmax(320px,400px) 1fr">
-        <div class="panel">
-          <div class="panel-title"><div><span class="dot"></span>Nova Tarifa</div></div>
-          <div class="field"><label>Imóvel *</label><select class="input" id="rt-property" onchange="renderRates()"></select></div>
-          <div class="field"><label>Rótulo *</label><input class="input" id="rt-label" placeholder="Alta Temporada"></div>
-          <div class="row row-2">
-            <div class="field"><label>Início *</label><input class="input" id="rt-start" type="date"></div>
-            <div class="field"><label>Fim *</label><input class="input" id="rt-end" type="date"></div>
-          </div>
-          <div class="row row-3">
-            <div class="field"><label>Diária (R$) *</label><input class="input" id="rt-price" type="number"></div>
-            <div class="field"><label>Mín. noites</label><input class="input" id="rt-min" type="number" value="1"></div>
-            <div class="field"><label>Prioridade</label><input class="input" id="rt-priority" type="number" value="5"></div>
-          </div>
-          <button class="btn btn-primary btn-block" onclick="saveRate()">➕ Adicionar</button>
-          <hr style="border:none;border-top:1px solid var(--border-soft);margin:16px 0">
-          <button class="btn btn-ghost btn-block" onclick="openCopyRatesModal()">📋 Copiar entre imóveis</button>
-        </div>
-        <div class="panel">
-          <div class="panel-title"><div><span class="dot"></span>Tarifas</div><button class="btn btn-ghost btn-sm" onclick="exportRatesCSV()">📤 CSV</button></div>
-          <div id="lista-tarifas"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="tab-calendario" class="tab-panel hidden">
-      <div class="panel">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px">
-          <div class="panel-title" style="margin:0"><div><span class="dot"></span>Disponibilidade</div></div>
-          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-            <select class="input" id="cal-filter-prop" onchange="renderCalendar()" style="max-width:180px"><option value="">Todos</option></select>
-            <button class="btn btn-ghost btn-sm" onclick="changeMonth(-1)">←</button>
-            <strong id="cal-label" style="font-family:Montserrat;min-width:160px;text-align:center"></strong>
-            <button class="btn btn-ghost btn-sm" onclick="changeMonth(1)">→</button>
-          </div>
-        </div>
-        <div class="cal-wrap"><table class="cal" id="cal-table"></table></div>
-        <div id="cal-legend" style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;font-size:.76rem"></div>
-      </div>
-    </section>
-
-    <section id="tab-orcamento" class="tab-panel hidden">
-      <div class="grid" style="grid-template-columns:minmax(320px,1fr) minmax(320px,1fr)">
-        <div class="panel">
-          <div class="panel-title"><div><span class="dot"></span>Calculadora</div></div>
-          <div class="field"><label>Imóvel</label><select class="input" id="orc-imovel" onchange="calcBudget()"></select></div>
-          <div class="row row-2">
-            <div class="field"><label>Check-in (14h)</label><input class="input" id="orc-in" type="date" onchange="calcBudget()"></div>
-            <div class="field"><label>Check-out (10h)</label><input class="input" id="orc-out" type="date" onchange="calcBudget()"></div>
-          </div>
-          <div class="row row-2">
-            <div class="field"><label>Nº hóspedes</label><input class="input" id="orc-guests" type="number" value="2" min="1" onchange="calcBudget()"></div>
-            <div class="field"><label>Nome cliente</label><input class="input" id="orc-client"></div>
-          </div>
-          <div class="field"><label>WhatsApp</label><input class="input" id="orc-phone" placeholder="47 9..."></div>
-          <div class="field"><label>Adicionais</label>
-            <label style="display:flex;gap:8px;font-size:.83rem;color:var(--muted);margin-top:4px"><input type="checkbox" id="add-roupa" onchange="calcBudget()"> Roupa de cama (R$ 80/pessoa)</label>
-            <label style="display:flex;gap:8px;font-size:.83rem;color:var(--muted)"><input type="checkbox" id="add-toalha" onchange="calcBudget()"> Toalhas (R$ 50/pessoa)</label>
-            <label style="display:flex;gap:8px;font-size:.83rem;color:var(--muted)"><input type="checkbox" id="add-presente" onchange="calcBudget()"> Boas-vindas (R$ 120)</label>
-          </div>
-          <div id="orc-aviso" style="margin-top:6px"></div>
-          <div id="orc-breakdown"></div>
-        </div>
-        <div class="panel">
-          <div class="panel-title">
-            <div><span class="dot"></span>Orçamento</div>
-            <div class="lang-toggle" id="lang-toggle">
-              <button data-lang="pt" class="active" onclick="setLang('pt')">🇧🇷 PT</button>
-              <button data-lang="es" onclick="setLang('es')">🇦🇷 ES</button>
-            </div>
-          </div>
-          <div class="row row-2" style="margin-bottom:12px">
-            <div class="field" style="margin:0"><label>Moeda</label>
-              <select class="input" id="orc-currency" onchange="calcBudget()">
-                <option value="BRL">🇧🇷 Real (R$)</option>
-                <option value="USD">🇺🇸 Dólar (US$)</option>
-                <option value="ARS">🇦🇷 Peso (AR$)</option>
-                <option value="EUR">🇪🇺 Euro (€)</option>
-              </select>
-            </div>
-            <div class="field" style="margin:0"><label>&nbsp;</label><button class="btn btn-ghost btn-block" onclick="openSettings()">⚙️ Cotações</button></div>
-          </div>
-          <div class="budget-box" id="orc-preview">Preencha os dados…</div>
-          <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
-            <button class="btn btn-wa btn-sm" onclick="sendWhats()">💬 WhatsApp</button>
-            <button class="btn btn-ghost btn-sm" onclick="copyBudget()">📋 Copiar</button>
-            <button class="btn btn-primary btn-sm" onclick="saveLeadFromBudget()">💾 CRM</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="tab-crm" class="tab-panel hidden">
-      <div class="panel" style="margin-bottom:18px">
-        <div class="panel-title"><div><span class="dot"></span>Novo Atendimento</div><button class="btn btn-ghost btn-sm" onclick="exportLeadsCSV()">📤 CSV</button></div>
-        <div class="row row-3">
-          <div class="field"><label>Nome *</label><input class="input" id="crm-name"></div>
-          <div class="field"><label>Telefone</label><input class="input" id="crm-phone"></div>
-          <div class="field"><label>Origem</label>
-            <select class="input" id="crm-source">
-              <option>Instagram</option><option>WhatsApp</option><option>Indicação</option>
-              <option>Airbnb</option><option>Booking</option><option>Site</option><option>Google</option><option>Outro</option>
-            </select>
-          </div>
-        </div>
-        <div class="row row-3">
-          <div class="field"><label>Imóvel</label><select class="input" id="crm-property"></select></div>
-          <div class="field"><label>Status</label>
-            <select class="input" id="crm-status">
-              <option>Novo</option><option>1º Contato</option><option>2º Contato</option>
-              <option>Visita Agendada</option><option>Orçamento Enviado</option>
-              <option>Reserva</option><option>Concretizado</option><option>Perdido</option>
-            </select>
-          </div>
-          <div class="field"><label>Valor (R$)</label><input class="input" id="crm-value" type="number"></div>
-        </div>
-        <div class="field"><label>Observações</label><textarea class="input" id="crm-notes"></textarea></div>
-        <button class="btn btn-primary" onclick="saveLead()">➕ Adicionar</button>
-      </div>
-      <div class="panel">
-        <div class="panel-title"><div><span class="dot"></span>Pipeline</div></div>
-        <div class="kanban" id="kanban"></div>
-      </div>
-    </section>
-
-    <section id="tab-contrato" class="tab-panel hidden">
-      <div class="grid" style="grid-template-columns:minmax(320px,1fr) minmax(320px,1fr)">
-        <div class="panel">
-          <div class="panel-title"><div><span class="dot"></span>Dados do Contrato</div></div>
-          <div class="row row-2">
-            <div class="field"><label>Titular</label><input class="input" id="ct-name" oninput="renderContract()"></div>
-            <div class="field"><label>CPF / DNI</label><input class="input" id="ct-doc" oninput="renderContract()"></div>
-          </div>
-          <div class="field"><label>Endereço</label><input class="input" id="ct-address" oninput="renderContract()"></div>
-          <div class="row row-3">
-            <div class="field"><label>Nascimento</label><input class="input" id="ct-birth" type="date" onchange="renderContract()"></div>
-            <div class="field"><label>Profissão</label><input class="input" id="ct-job" oninput="renderContract()"></div>
-            <div class="field"><label>E-mail</label><input class="input" id="ct-email" oninput="renderContract()"></div>
-          </div>
-          <hr style="border:none;border-top:1px solid var(--border-soft);margin:14px 0">
-          <div class="row row-2">
-            <div class="field"><label>Imóvel</label><select class="input" id="ct-property" onchange="renderContract()"></select></div>
-            <div class="field"><label>Valor total (R$)</label><input class="input" id="ct-value" type="number" onchange="renderContract()"></div>
-          </div>
-          <div class="row row-2">
-            <div class="field"><label>Check-in</label><input class="input" id="ct-in" type="date" onchange="renderContract()"></div>
-            <div class="field"><label>Check-out</label><input class="input" id="ct-out" type="date" onchange="renderContract()"></div>
-          </div>
-        </div>
-        <div class="panel">
-          <div class="panel-title"><div><span class="dot"></span>Pré-visualização</div></div>
-          <div class="budget-box" id="ct-preview">…</div>
-          <div style="display:flex;gap:8px;margin-top:14px">
-            <button class="btn btn-primary btn-sm" onclick="printContract()">🖨️ PDF</button>
-            <button class="btn btn-ghost btn-sm" onclick="copyContract()">📋 Copiar</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
-</div>
 
-<!-- =================== MODAL + TOAST =================== -->
-<div class="modal-bg hidden" id="modal-bg" onclick="if(event.target===this) closeModal()">
-  <div class="modal" id="modal-content"></div>
-</div>
-<input type="file" id="file-input" accept=".json" style="display:none" onchange="handleImportFile(event)">
-<div class="toast" id="toast"></div>
-
-<script>
-/* ═══════════════════════════════════════════════════════════════
-   CONFIG
-   ═══════════════════════════════════════════════════════════════ */
-const CONFIG = {
-  whatsapp: '5547991375505',
-  instagram: 'katiuciabombinhas',
-  adminPassword: 'bombinhas2025'
-};
-
-/* ═══════════════════════════════════════════════════════════════
-   ESTADO
-   ═══════════════════════════════════════════════════════════════ */
-const LS_KEY = 'bt_state_v5';
-const LS_BACKUP = 'bt_state_backup_v5';
-const LS_MODE = 'bt_mode';
-const KEYS_OLD = ['bt_state_v4','bt_state_v3','bt_state_v2','bt_state_v1'];
-
-let state = {
-  properties: [],
-  leads: [],
-  blocked: {},
-  calMonth: new Date(),
-  settings: {
-    rates: { USD: 5.40, ARS: 0.0065, EUR: 6.10 },
-    updatedAt: null,
-    lang: 'pt',
-  },
-};
-let currentMode = 'public';
-
-const uid = ()=>Math.random().toString(36).slice(2,9);
-const todayISO = ()=>new Date().toISOString().slice(0,10);
-const parseISO = s=>{const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)};
-const fmtDateBR = s=>{if(!s)return '';const [y,m,d]=s.split('-');return `${d}/${m}/${y}`};
-const nightsBetween = (a,b)=>{if(!a||!b)return 0;const d=(parseISO(b)-parseISO(a))/86400000;return d>0?d:0};
-const monthLabel = d=>d.toLocaleDateString('pt-BR',{month:'long',year:'numeric'}).replace(/^./,c=>c.toUpperCase());
-const daysInMonth = d=>new Date(d.getFullYear(),d.getMonth()+1,0).getDate();
-const isoOf = (y,m,d)=>`${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-
-const CURRENCY_SYMBOL = { BRL:'R$', USD:'US$', ARS:'AR$', EUR:'€' };
-function fmtBRL(v){return 'R$ '+(Number(v)||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}
-function convertFromBRL(valueBRL, currency){
-  const rate = state.settings.rates[currency];
-  if(currency === 'BRL' || !rate) return Number(valueBRL)||0;
-  return (Number(valueBRL)||0) / rate;
-}
-function fmtCurrency(valueBRL, currency='BRL'){
-  const v = convertFromBRL(valueBRL, currency);
-  const sym = CURRENCY_SYMBOL[currency] || 'R$';
-  return sym + ' ' + v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
-}
-
-function save(){
-  const prev = localStorage.getItem(LS_KEY);
-  if(prev) localStorage.setItem(LS_BACKUP, prev);
-  localStorage.setItem(LS_KEY, JSON.stringify(state));
-}
-
-function load(){
-  const raw = localStorage.getItem(LS_KEY);
-  if(raw){
-    try{
-      state = Object.assign(state, JSON.parse(raw));
-      state.calMonth = new Date(state.calMonth||Date.now());
-      if(!state.settings) state.settings = {rates:{USD:5.40,ARS:0.0065,EUR:6.10},updatedAt:null,lang:'pt'};
-    }catch(e){}
-  } else {
-    for(const k of KEYS_OLD){
-      const o = localStorage.getItem(k); if(!o) continue;
-      try{
-        const d = JSON.parse(o);
-        state.properties = (d.properties||[]).map(p=>({
-          id:p.id||uid(), code:p.code, name:p.name, local:p.local||'',
-          neighborhood:p.neighborhood||'', photo:p.photo||'', tags:p.tags||[],
-          gallery:p.gallery||[], featured:p.featured||false,
-          basePrice:Number(p.basePrice||p.price)||0,
-          minNightsDefault:p.minNightsDefault||2,
-          clean:Number(p.clean)||0, cap:Number(p.cap)||1,
-          bedrooms:p.bedrooms||0, bathrooms:p.bathrooms||0, parking:p.parking||0,
-          shortDesc:p.shortDesc||p.desc||'', longDesc:p.longDesc||p.desc||'',
-          amenities:p.amenities||[], desc:p.desc||'',
-          rates:p.rates||[],
-          createdAt:p.createdAt||new Date().toISOString(),
-          updatedAt:p.updatedAt||new Date().toISOString(),
-        }));
-        state.leads = d.leads||[];
-        state.blocked = d.blocked||{};
-      }catch(e){}
-      break;
-    }
-  }
-  if(!state.properties.length){ seedDemo(); save(); }
-}
-
-function seedDemo(){
-  state.properties.push({
-    id:uid(), code:'ONIX', name:'Casa Ônix',
-    local:'Mariscal, Bombinhas/SC', neighborhood:'Mariscal',
-    photo:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
-    gallery:[
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80',
-    ],
-    featured:true, tags:['piscina','sinuca','luxo'],
-    basePrice:800, minNightsDefault:2, clean:300, cap:10,
-    bedrooms:4, bathrooms:3, parking:2,
-    shortDesc:'Piscina privativa, sinuca e suíte master com banheira. Ideal para famílias e grupos.',
-    longDesc:'Desfrute de dias inesquecíveis na Casa Ônix, uma casa completa e aconchegante no bairro Mariscal, uma das regiões mais valorizadas de Bombinhas. Com ampla área de lazer, piscina privativa e ambientes climatizados, a casa oferece tudo o que você precisa para relaxar.',
-    amenities:['Piscina privativa','Mesa de sinuca','Área gourmet','Churrasqueira','Wi-Fi','Ar-condicionado','Cozinha equipada','Roupa de cama inclusa'],
-    desc:'Piscina privativa, sinuca, suíte master com banheira.',
-    rates:[
-      {id:uid(),label:'Alta Temporada Verão',start:'2026-12-15',end:'2027-02-28',price:1200,minNights:5,priority:5},
-      {id:uid(),label:'Réveillon',start:'2026-12-28',end:'2027-01-02',price:2500,minNights:7,priority:10},
-    ],
-    createdAt:new Date().toISOString(), updatedAt:new Date().toISOString(),
-  });
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   TOAST
-   ═══════════════════════════════════════════════════════════════ */
-let toastTimer;
-function toast(msg, type='ok'){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.className = 'toast show' + (type==='error'?' error':type==='warn'?' warn':'');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>t.classList.remove('show'), 2800);
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   MODO (público / admin)
-   ═══════════════════════════════════════════════════════════════ */
-function setMode(mode){
-  currentMode = mode;
-  localStorage.setItem(LS_MODE, mode);
-  document.getElementById('public-view').classList.toggle('hidden', mode!=='public');
-  document.getElementById('admin-view').classList.toggle('hidden', mode!=='admin');
-  document.getElementById('header-public').classList.toggle('hidden', mode!=='public');
-  document.getElementById('header-admin').classList.toggle('hidden', mode!=='admin');
-  if(mode==='public'){ renderPublicVitrine(); window.scrollTo({top:0}); }
-  if(mode==='admin'){ renderAll(); }
-}
-function promptAdmin(){
-  const pwd = prompt('🔒 Senha da área do corretor:');
-  if(pwd === CONFIG.adminPassword){ setMode('admin'); toast('Bem-vinda, Katiucia!'); }
-  else if(pwd !== null) toast('Senha incorreta.', 'error');
-}
-function lockAdmin(){ setMode('public'); toast('Modo público ativado.'); }
-function scrollTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
-
-/* ═══════════════════════════════════════════════════════════════
-   ALGORITMO DE PREÇO
-   ═══════════════════════════════════════════════════════════════ */
-function priceForNight(property, isoDate){
-  const matches = (property.rates||[])
-    .filter(r=>isoDate>=r.start && isoDate<=r.end)
-    .sort((a,b)=>{
-      if(b.priority!==a.priority) return b.priority-a.priority;
-      return (parseISO(a.end)-parseISO(a.start)) - (parseISO(b.end)-parseISO(b.start));
-    });
-  if(matches.length) return matches[0];
-  return {id:'__base__',label:'Tarifa Padrão',price:property.basePrice,minNights:property.minNightsDefault||1,priority:0};
-}
-function calcTotal(property, checkin, checkout){
-  const r = {total:0, breakdown:{}, minNights:1, nights:0};
-  if(!checkin||!checkout) return r;
-  const a = parseISO(checkin), b = parseISO(checkout);
-  if(b<=a) return r;
-  for(let d=new Date(a); d<b; d.setDate(d.getDate()+1)){
-    const iso = d.toISOString().slice(0,10);
-    const rate = priceForNight(property, iso);
-    r.total += rate.price; r.nights++;
-    if(!r.breakdown[rate.label]) r.breakdown[rate.label] = {price:rate.price, nights:0};
-    r.breakdown[rate.label].nights++;
-    if(rate.minNights > r.minNights) r.minNights = rate.minNights;
-  }
-  return r;
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   TABS ADMIN
-   ═══════════════════════════════════════════════════════════════ */
-document.getElementById('tabs').addEventListener('click',e=>{
-  const btn = e.target.closest('.tab'); if(!btn) return;
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.add('hidden'));
-  document.getElementById('tab-'+btn.dataset.tab).classList.remove('hidden');
-  const tab = btn.dataset.tab;
-  if(tab==='dashboard') renderDashboard();
-  if(tab==='imoveis') renderProperties();
-  if(tab==='tarifas') renderRates();
-  if(tab==='calendario') renderCalendar();
-  if(tab==='crm') renderCRM();
-  if(tab==='orcamento') calcBudget();
-  if(tab==='contrato') renderContract();
-});
-
-/* ═══════════════════════════════════════════════════════════════
-   IMÓVEIS (CRUD)
-   ═══════════════════════════════════════════════════════════════ */
-function saveProperty(){
-  const id = document.getElementById('im-id').value;
-  const code = document.getElementById('im-code').value.trim().toUpperCase();
-  const name = document.getElementById('im-name').value.trim();
-  const neighborhood = document.getElementById('im-neighborhood').value.trim();
-  const local = document.getElementById('im-local').value.trim();
-  const photo = document.getElementById('im-photo').value.trim();
-  const gallery = document.getElementById('im-gallery').value.split('\n').map(s=>s.trim()).filter(Boolean);
-  const basePrice = +document.getElementById('im-price').value||0;
-  const clean = +document.getElementById('im-clean').value||0;
-  const cap = +document.getElementById('im-cap').value||1;
-  const bedrooms = +document.getElementById('im-bedrooms').value||0;
-  const bathrooms = +document.getElementById('im-bathrooms').value||0;
-  const parking = +document.getElementById('im-parking').value||0;
-  const minN = +document.getElementById('im-min').value||2;
-  const tags = document.getElementById('im-tags').value.split(',').map(t=>t.trim()).filter(Boolean);
-  const amenities = document.getElementById('im-amenities').value.split('\n').map(s=>s.trim()).filter(Boolean);
-  const shortDesc = document.getElementById('im-short').value.trim();
-  const longDesc = document.getElementById('im-desc').value.trim();
-  const featured = document.getElementById('im-featured').checked;
-  if(!code||!name){toast('Preencha código e nome.', 'error');return}
-  if(basePrice<=0){toast('Informe a diária base.', 'error');return}
-  if(id){
-    const p = state.properties.find(x=>x.id===id); if(!p) return;
-    if(state.properties.some(x=>x.id!==id && x.code===code)){toast('Código já existe.', 'error');return}
-    Object.assign(p, {code, name, neighborhood, local, photo, gallery, featured,
-      basePrice, clean, cap, bedrooms, bathrooms, parking, minNightsDefault:minN,
-      tags, amenities, shortDesc, longDesc, desc:shortDesc, updatedAt:new Date().toISOString()});
-    toast('Imóvel atualizado!');
-  } else {
-    if(state.properties.some(x=>x.code===code)){toast('Código já existe.', 'error');return}
-    state.properties.push({
-      id:uid(), code, name, neighborhood, local, photo, gallery, featured, tags,
-      basePrice, minNightsDefault:minN, clean, cap, bedrooms, bathrooms, parking,
-      amenities, shortDesc, longDesc, desc:shortDesc, rates:[],
-      createdAt:new Date().toISOString(), updatedAt:new Date().toISOString(),
-    });
-    toast('Imóvel adicionado!');
-  }
-  save(); clearPropertyForm(); renderAll();
-}
-function clearPropertyForm(){
-  ['im-id','im-code','im-name','im-neighborhood','im-local','im-photo','im-gallery','im-price','im-clean','im-cap','im-bedrooms','im-bathrooms','im-parking','im-tags','im-amenities','im-short','im-desc'].forEach(id=>document.getElementById(id).value='');
-  document.getElementById('im-min').value=2;
-  document.getElementById('im-featured').checked=false;
-  document.getElementById('form-prop-title').textContent='Cadastrar Imóvel';
-  document.getElementById('btn-save-prop').innerHTML='➕ Adicionar';
-  document.getElementById('btn-cancel-prop').style.display='none';
-}
-function editProperty(id){
-  const p = state.properties.find(x=>x.id===id); if(!p) return;
-  document.getElementById('im-id').value=p.id;
-  document.getElementById('im-code').value=p.code;
-  document.getElementById('im-name').value=p.name;
-  document.getElementById('im-neighborhood').value=p.neighborhood||'';
-  document.getElementById('im-local').value=p.local||'';
-  document.getElementById('im-photo').value=p.photo||'';
-  document.getElementById('im-gallery').value=(p.gallery||[]).join('\n');
-  document.getElementById('im-price').value=p.basePrice;
-  document.getElementById('im-clean').value=p.clean;
-  document.getElementById('im-cap').value=p.cap;
-  document.getElementById('im-bedrooms').value=p.bedrooms||0;
-  document.getElementById('im-bathrooms').value=p.bathrooms||0;
-  document.getElementById('im-parking').value=p.parking||0;
-  document.getElementById('im-min').value=p.minNightsDefault;
-  document.getElementById('im-tags').value=(p.tags||[]).join(', ');
-  document.getElementById('im-amenities').value=(p.amenities||[]).join('\n');
-  document.getElementById('im-short').value=p.shortDesc||p.desc||'';
-  document.getElementById('im-desc').value=p.longDesc||p.desc||'';
-  document.getElementById('im-featured').checked=p.featured||false;
-  document.getElementById('form-prop-title').textContent='Editar: '+p.code;
-  document.getElementById('btn-save-prop').innerHTML='💾 Salvar';
-  document.getElementById('btn-cancel-prop').style.display='inline-flex';
-  window.scrollTo({top:0, behavior:'smooth'});
-}
-function deleteProperty(id){
-  if(!confirm('Excluir imóvel?'))return;
-  state.properties = state.properties.filter(p=>p.id!==id);
-  delete state.blocked[id];
-  save(); renderAll(); toast('Excluído.');
-}
-function renderProperties(){
-  const search = (document.getElementById('filter-props')?.value||'').toLowerCase();
-  const neigh = document.getElementById('filter-neighborhood')?.value||'';
-  const sort = document.getElementById('sort-props')?.value||'code';
-  const neighborhoods = [...new Set(state.properties.map(p=>p.neighborhood).filter(Boolean))].sort();
-  const dl = document.getElementById('bairros-list'); if(dl) dl.innerHTML = neighborhoods.map(n=>`<option value="${n}">`).join('');
-  const fsel = document.getElementById('filter-neighborhood');
-  if(fsel){ const cur = fsel.value; fsel.innerHTML = '<option value="">Todos os bairros</option>'+neighborhoods.map(n=>`<option>${n}</option>`).join(''); fsel.value = cur; }
-  const calSel = document.getElementById('cal-filter-prop');
-  if(calSel){ const cur = calSel.value; calSel.innerHTML = '<option value="">Todos</option>'+state.properties.map(p=>`<option value="${p.id}">${p.code}</option>`).join(''); calSel.value = cur; }
-
-  let list = state.properties.slice();
-  if(search) list = list.filter(p=>(p.code+' '+p.name+' '+(p.local||'')+' '+(p.tags||[]).join(' ')).toLowerCase().includes(search));
-  if(neigh) list = list.filter(p=>p.neighborhood===neigh);
-  list.sort((a,b)=>{
-    if(sort==='code') return a.code.localeCompare(b.code);
-    if(sort==='name') return a.name.localeCompare(b.name);
-    if(sort==='price-asc') return a.basePrice-b.basePrice;
-    if(sort==='price-desc') return b.basePrice-a.basePrice;
-    return 0;
-  });
-  document.getElementById('cnt-imoveis').textContent = state.properties.length;
-  const el = document.getElementById('lista-imoveis');
-  if(!list.length){el.innerHTML='<p class="muted" style="padding:20px">Nenhum imóvel.</p>';return}
-  el.innerHTML = list.map(p=>`
-    <div class="prop-card">
-      <div class="photo" ${p.photo?`style="background-image:url('${p.photo}')"`:''}>${!p.photo?'🏠':''}<span class="badge-photo">${p.code}</span></div>
-      <div class="body">
-        <h4>${p.name} ${p.featured?'⭐':''}</h4>
-        <div class="loc">📍 ${p.local||p.neighborhood||'—'}</div>
-        <div class="stats"><span>👥 ${p.cap}</span><span>🛏️ ${p.bedrooms||0}</span><span>🏷️ ${(p.rates||[]).length}</span></div>
-        <div class="price">${fmtBRL(p.basePrice)}<small>/noite</small></div>
-        <div class="actions">
-          <button class="btn btn-ghost btn-sm" onclick="editProperty('${p.id}')">✏️ Editar</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteProperty('${p.id}')">🗑️</button>
-        </div>
-      </div>
-    </div>`).join('');
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   TARIFAS
-   ═══════════════════════════════════════════════════════════════ */
-function priorityColor(pr){ if(pr>=10) return '#f43f5e'; if(pr>=5) return '#10b981'; if(pr>=1) return '#0ea5e9'; return '#6f8fa3'; }
-function saveRate(){
-  const propId = document.getElementById('rt-property').value;
-  const p = state.properties.find(x=>x.id===propId);
-  if(!p){toast('Selecione imóvel.', 'error');return}
-  const label = document.getElementById('rt-label').value.trim();
-  const start = document.getElementById('rt-start').value;
-  const end = document.getElementById('rt-end').value;
-  const price = +document.getElementById('rt-price').value||0;
-  const min = +document.getElementById('rt-min').value||1;
-  const priority = +document.getElementById('rt-priority').value||5;
-  if(!label||!start||!end||price<=0){toast('Preencha todos os campos.', 'error');return}
-  if(parseISO(end)<parseISO(start)){toast('Data final anterior.', 'error');return}
-  if(!p.rates) p.rates = [];
-  p.rates.push({id:uid(), label, start, end, price, minNights:min, priority});
-  p.updatedAt = new Date().toISOString();
-  save(); renderRates(); renderCalendar();
-  ['rt-label','rt-start','rt-end','rt-price'].forEach(id=>document.getElementById(id).value='');
-  document.getElementById('rt-min').value=1; document.getElementById('rt-priority').value=5;
-  toast(`Tarifa "${label}" adicionada!`);
-}
-function deleteRate(propId, rateId){
-  if(!confirm('Excluir tarifa?'))return;
-  const p = state.properties.find(x=>x.id===propId); if(!p)return;
-  p.rates = (p.rates||[]).filter(r=>r.id!==rateId);
-  save(); renderRates(); renderCalendar(); toast('Removida.');
-}
-function renderRates(){
-  const propId = document.getElementById('rt-property').value;
-  const p = state.properties.find(x=>x.id===propId);
-  const el = document.getElementById('lista-tarifas');
-  if(!p){el.innerHTML='<p class="muted">Selecione um imóvel.</p>';return}
-  if(!p.rates || !p.rates.length){el.innerHTML=`<p class="muted">Sem tarifas. Tudo em ${fmtBRL(p.basePrice)}.</p>`;return}
-  const sorted = [...p.rates].sort((a,b)=>a.start.localeCompare(b.start));
-  el.innerHTML = `<div style="margin-bottom:14px;padding:12px 14px;background:rgba(16,185,129,.08);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.82rem">💵 <strong style="color:var(--emerald-3)">Base:</strong> ${fmtBRL(p.basePrice)}/noite · 🌙 Mín: ${p.minNightsDefault}</div>` +
-    sorted.map(r=>`<div class="rate-card" style="border-left-color:${priorityColor(r.priority)}">
-      <div class="rc-head"><div class="rc-label">${r.label}</div><div class="rc-price">${fmtBRL(r.price)}</div></div>
-      <div class="rc-meta"><span>📅 ${fmtDateBR(r.start)} → ${fmtDateBR(r.end)}</span><span>🌙 mín ${r.minNights}</span><span class="priority-pill">prior. ${r.priority}</span></div>
-      <div class="rc-actions"><button class="btn btn-danger btn-sm" onclick="deleteRate('${p.id}','${r.id}')">🗑️</button></div>
-    </div>`).join('');
-}
-function openCopyRatesModal(){
-  if(state.properties.length<2){toast('Precisa de 2 imóveis.', 'warn');return}
-  const opts = state.properties.map(p=>`<option value="${p.id}">${p.code} (${(p.rates||[]).length})</option>`).join('');
-  openModal(`
-    <span class="close-x" onclick="closeModal()">✕</span>
-    <h3>📋 Copiar tarifas</h3>
-    <div class="field"><label>De</label><select class="input" id="cp-from">${opts}</select></div>
-    <div class="field"><label>Para</label><select class="input" id="cp-to">${opts}</select></div>
-    <div style="display:flex;gap:8px;margin-top:14px">
-      <button class="btn btn-primary btn-block" onclick="confirmCopyRates(false)">➕ Adicionar</button>
-      <button class="btn btn-danger btn-block" onclick="confirmCopyRates(true)">🔄 Substituir</button>
-    </div>
-  `);
-}
-function confirmCopyRates(replace){
-  const fromId = document.getElementById('cp-from').value;
-  const toId = document.getElementById('cp-to').value;
-  if(fromId===toId){toast('Iguais.', 'error');return}
-  const src = state.properties.find(x=>x.id===fromId);
-  const dst = state.properties.find(x=>x.id===toId);
-  const newRates = (src.rates||[]).map(r=>({...r,id:uid()}));
-  dst.rates = replace ? newRates : [...(dst.rates||[]), ...newRates];
-  save(); closeModal(); renderAll(); toast('Copiado!');
-}
-function exportRatesCSV(){
-  const rows = [['Imóvel','Rótulo','Início','Fim','Diária','Mín.','Prioridade']];
-  state.properties.forEach(p=>(p.rates||[]).forEach(r=>rows.push([p.code,r.label,r.start,r.end,r.price,r.minNights,r.priority])));
-  if(rows.length===1){toast('Sem tarifas.', 'warn');return}
-  downloadCSV(rows,'tarifas.csv');
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   CALENDÁRIO
-   ═══════════════════════════════════════════════════════════════ */
-function changeMonth(delta){ state.calMonth = new Date(state.calMonth.getFullYear(), state.calMonth.getMonth()+delta, 1); save(); renderCalendar(); }
-function isBlocked(propId, iso){return (state.blocked[propId]||[]).includes(iso)}
-function toggleBlock(propId, iso){
-  const arr = state.blocked[propId]||[];
-  const i = arr.indexOf(iso);
-  if(i>=0) arr.splice(i,1); else arr.push(iso);
-  state.blocked[propId] = arr; save(); renderCalendar();
-}
-function renderCalendar(){
-  const d = state.calMonth;
-  document.getElementById('cal-label').textContent = monthLabel(d);
-  const y=d.getFullYear(), m=d.getMonth(), nDays=daysInMonth(d), todayISO_=todayISO();
-  const filterId = document.getElementById('cal-filter-prop')?.value||'';
-  const props = filterId ? state.properties.filter(p=>p.id===filterId) : state.properties;
-  let html = '<thead><tr><th class="prop-col">Imóvel</th>';
-  for(let i=1;i<=nDays;i++){
-    const wd = new Date(y,m,i).getDay();
-    const wdName = ['D','S','T','Q','Q','S','S'][wd];
-    const weekend = (wd===0||wd===6)?' style="color:#fcd34d"':'';
-    html += `<th${weekend}>${wdName}<br>${String(i).padStart(2,'0')}</th>`;
-  }
-  html += '</tr></thead><tbody>';
-  if(!props.length) html += '<tr><td colspan="32" style="padding:20px;color:#94b5c7">Cadastre um imóvel.</td></tr>';
-  props.forEach(p=>{
-    html += `<tr><td class="prop-col">${p.code}<small>${p.name}</small></td>`;
-    for(let i=1;i<=nDays;i++){
-      const iso = isoOf(y,m,i);
-      const wd = new Date(y,m,i).getDay();
-      const busy = isBlocked(p.id, iso);
-      const cls = (busy?'cell-busy':'cell-free') + ((wd===0||wd===6)?' cell-weekend':'');
-      const td = iso===todayISO_?'cell-today':'';
-      let rateBar = '';
-      if(!busy){
-        const rate = priceForNight(p, iso);
-        if(rate.id!=='__base__') rateBar = `<span class="cell-rate-bar" style="background:${priorityColor(rate.priority)}"></span>`;
-      }
-      html += `<td class="${cls} ${td}" onclick="toggleBlock('${p.id}','${iso}')" title="${busy?'Ocupado':'Clique para bloquear'}">${busy?'—':'✓'}${rateBar}</td>`;
-    }
-    html += '</tr>';
-  });
-  html += '</tbody>';
-  document.getElementById('cal-table').innerHTML = html;
-  const uniq = {};
-  state.properties.forEach(p=>(p.rates||[]).forEach(r=>{if(!uniq[r.label]) uniq[r.label]=r;}));
-  document.getElementById('cal-legend').innerHTML = `
-    <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:rgba(16,185,129,.5);display:inline-block"></span> Livre</span>
-    <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:rgba(244,63,94,.5);display:inline-block"></span> Ocupado</span>
-    ${Object.values(uniq).map(r=>`<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:${priorityColor(r.priority)};display:inline-block"></span> ${r.label}</span>`).join('')}
-  `;
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   ORÇAMENTO
-   ═══════════════════════════════════════════════════════════════ */
-function populateSelects(){
-  const opts = state.properties.map(p=>`<option value="${p.id}">${p.code} — ${p.name}</option>`).join('');
-  ['orc-imovel','crm-property','ct-property','rt-property'].forEach(id=>{
-    const el = document.getElementById(id); if(!el)return;
-    const cur = el.value;
-    el.innerHTML = opts || '<option value="">—</option>';
-    if(cur && [...el.options].some(o=>o.value===cur)) el.value=cur;
-  });
-}
-function checkAvailability(propId, inISO, outISO){
-  if(!inISO||!outISO) return {ok:true, conflicts:[]};
-  const a = parseISO(inISO), b = parseISO(outISO);
-  const conflicts = [];
-  for(let t=new Date(a); t<b; t.setDate(t.getDate()+1)){
-    const iso = t.toISOString().slice(0,10);
-    if(isBlocked(propId, iso)) conflicts.push(iso);
-  }
-  return {ok:conflicts.length===0, conflicts};
-}
-function calcBudget(){
-  const propId = document.getElementById('orc-imovel').value;
-  const p = state.properties.find(x=>x.id===propId);
-  const inD = document.getElementById('orc-in').value;
-  const outD = document.getElementById('orc-out').value;
-  const guests = +document.getElementById('orc-guests').value||1;
-  const lang = state.settings.lang || 'pt';
-  const currency = document.getElementById('orc-currency')?.value || 'BRL';
-  const prev = document.getElementById('orc-preview');
-  const aviso = document.getElementById('orc-aviso');
-  const bdEl = document.getElementById('orc-breakdown');
-  if(!p){prev.textContent = lang==='es'?'Cargue una propiedad primero.':'Cadastre um imóvel primeiro.';aviso.innerHTML='';bdEl.innerHTML='';return}
-  const calc = calcTotal(p, inD, outD);
-  const n = calc.nights;
-  let minNightsError = null;
-  if(n>0 && calc.minNights > n){
-    minNightsError = lang==='es'
-      ? `Este período exige mínimo de ${calc.minNights} noche(s). Seleccionó ${n}.`
-      : `Este período exige mínimo de ${calc.minNights} noite(s). Você selecionou ${n}.`;
-  }
-  const chk = checkAvailability(p.id, inD, outD);
-  const roupa = document.getElementById('add-roupa').checked?80*guests:0;
-  const toalha = document.getElementById('add-toalha').checked?50*guests:0;
-  const presente = document.getElementById('add-presente').checked?120:0;
-  const subtotal = calc.total;
-  const total = subtotal + p.clean + roupa + toalha + presente;
-  const reserva = total*0.5, saldo = total-reserva;
-  const M = v => fmtCurrency(v, currency);
-  let avisoHTML = '';
-  if(inD && outD){
-    if(!chk.ok) avisoHTML += `<span class="badge b-err">✕ Ocupado: ${chk.conflicts.map(fmtDateBR).join(', ')}</span> `;
-    else if(n>0) avisoHTML += `<span class="badge b-ok">✓ ${lang==='es'?'Disponible':'Disponível'}</span> `;
-    if(minNightsError) avisoHTML += `<div class="badge b-warn" style="margin-top:8px;display:block">⚠️ ${minNightsError}</div>`;
-  }
-  aviso.innerHTML = avisoHTML;
-  if(n>0 && Object.keys(calc.breakdown).length){
-    bdEl.innerHTML = `<div class="breakdown"><h5>🌙 Detalhamento</h5>${Object.entries(calc.breakdown).map(([l,i])=>`<div class="bd-row"><span>${l} — ${i.nights}× ${M(i.price)}</span><span>${M(i.nights*i.price)}</span></div>`).join('')}</div>`;
-  } else bdEl.innerHTML='';
-  const client = document.getElementById('orc-client').value||'—';
-  const phone = document.getElementById('orc-phone').value||'—';
-  const bloqueado = !chk.ok || minNightsError;
-  const currencyLabel = {BRL:'Real (R$)', USD:'Dólar (US$)', ARS:'Peso (AR$)', EUR:'Euro (€)'}[currency];
-  let txt;
-  if(bloqueado){
-    txt = lang==='es'
-      ? `⚠️ *PRESUPUESTO NO DISPONIBLE*\n\n` + (minNightsError?`• ${minNightsError}\n`:'') + (!chk.ok?`• Fechas ocupadas: ${chk.conflicts.map(fmtDateBR).join(', ')}\n`:'')
-      : `⚠️ *ORÇAMENTO INDISPONÍVEL*\n\n` + (minNightsError?`• ${minNightsError}\n`:'') + (!chk.ok?`• Datas ocupadas: ${chk.conflicts.map(fmtDateBR).join(', ')}\n`:'');
-  } else if(lang==='es'){
-    txt = `🏖️ *PRESUPUESTO DE TEMPORADA* 🏖️
-*Bombinhas Temporada* — Katiucia Cachoeira
-CRECI SC 70216F · (47) 99137-5505
-
-🏠 *Propiedad:* ${p.code} — ${p.name}
-📍 ${p.local||'Bombinhas/SC'}
-👤 *Cliente:* ${client}
-📱 *Contacto:* ${phone}
-👥 *Huéspedes:* ${guests} personas
-💱 *Moneda:* ${currencyLabel}
-
-📅 *Check-in:* ${fmtDateBR(inD)||'—'} (14h)
-📅 *Check-out:* ${fmtDateBR(outD)||'—'} (10h)
-🌙 *Noches:* ${n}
-
-${Object.entries(calc.breakdown).map(([l,i])=>`  • ${l}: ${i.nights}× ${M(i.price)} = ${M(i.nights*i.price)}`).join('\n')}
-
-🧾 *Subtotal:* ${M(subtotal)}
-🧹 *Limpieza:* ${M(p.clean)}
-${roupa?`🛏️ *Ropa de cama:* ${M(roupa)}\n`:''}${toalha?`🛁 *Toallas:* ${M(toalha)}\n`:''}${presente?`🎁 *Bienvenida:* ${M(presente)}\n`:''}
-━━━━━━━━━━━━━━━━━━━
-💰 *TOTAL:* ${M(total)}
-━━━━━━━━━━━━━━━━━━━
-
-💳 *Seña:* ${M(reserva)} (50%) — PIX o Western Union
-💵 *Saldo:* ${M(saldo)}`;
-  } else {
-    txt = `🏖️ *ORÇAMENTO DE TEMPORADA* 🏖️
-*Bombinhas Temporada* — Katiucia Cachoeira
-CRECI SC 70216F · (47) 99137-5505
-
-🏠 *Imóvel:* ${p.code} — ${p.name}
-📍 ${p.local||'Bombinhas/SC'}
-👤 *Cliente:* ${client}
-📱 *Contato:* ${phone}
-👥 *Hóspedes:* ${guests} pessoas
-💱 *Moeda:* ${currencyLabel}
-
-📅 *Check-in:* ${fmtDateBR(inD)||'—'} (14h)
-📅 *Check-out:* ${fmtDateBR(outD)||'—'} (10h)
-🌙 *Noites:* ${n}
-
-${Object.entries(calc.breakdown).map(([l,i])=>`  • ${l}: ${i.nights}× ${M(i.price)} = ${M(i.nights*i.price)}`).join('\n')}
-
-🧾 *Subtotal:* ${M(subtotal)}
-🧹 *Limpeza:* ${M(p.clean)}
-${roupa?`🛏️ *Roupa de cama:* ${M(roupa)}\n`:''}${toalha?`🛁 *Toalhas:* ${M(toalha)}\n`:''}${presente?`🎁 *Boas-vindas:* ${M(presente)}\n`:''}
-━━━━━━━━━━━━━━━━━━━
-💰 *TOTAL:* ${M(total)}
-━━━━━━━━━━━━━━━━━━━
-
-💳 *Reserva:* ${M(reserva)} (50%) — PIX ou Western Union
-💵 *Saldo na entrada:* ${M(saldo)}`;
-  }
-  prev.textContent = txt;
-  prev.dataset.value = total;
-  prev.dataset.blocked = bloqueado?'1':'';
-}
-function copyBudget(){navigator.clipboard.writeText(document.getElementById('orc-preview').textContent).then(()=>toast('Copiado!'))}
-function sendWhats(){
-  if(document.getElementById('orc-preview').dataset.blocked){toast('Indisponível.', 'error');return}
-  const t = document.getElementById('orc-preview').textContent;
-  const phone = document.getElementById('orc-phone').value.replace(/\D/g,'');
-  const url = phone?`https://wa.me/55${phone}?text=${encodeURIComponent(t)}`:`https://wa.me/?text=${encodeURIComponent(t)}`;
-  window.open(url,'_blank');
-}
-function saveLeadFromBudget(){
-  const propId = document.getElementById('orc-imovel').value;
-  const p = state.properties.find(x=>x.id===propId);
-  state.leads.push({
-    id:uid(),
-    name:document.getElementById('orc-client').value||'Sem nome',
-    phone:document.getElementById('orc-phone').value||'',
-    source:'WhatsApp', property:p?p.code:'', status:'Orçamento Enviado',
-    value:+document.getElementById('orc-preview').dataset.value||0,
-    notes:`Check-in ${fmtDateBR(document.getElementById('orc-in').value)} → ${fmtDateBR(document.getElementById('orc-out').value)}`,
-    date:new Date().toISOString(),
-  });
-  save(); renderCRM(); renderDashboard(); toast('Salvo no CRM!');
-}
-function setLang(l){
-  state.settings.lang = l; save();
-  document.querySelectorAll('#lang-toggle button').forEach(b=>b.classList.toggle('active', b.dataset.lang===l));
-  calcBudget();
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   CRM
-   ═══════════════════════════════════════════════════════════════ */
-const STATUSES = ['Novo','1º Contato','2º Contato','Visita Agendada','Orçamento Enviado','Reserva','Concretizado','Perdido'];
-function statusClass(s){
-  const m = {'Novo':'b-novo','1º Contato':'b-1contato','2º Contato':'b-2contato','Visita Agendada':'b-visita','Orçamento Enviado':'b-orcamento','Reserva':'b-reserva','Concretizado':'b-concretizado','Perdido':'b-perdido'};
-  return m[s]||'b-novo';
-}
-function saveLead(){
-  const name = document.getElementById('crm-name').value.trim();
-  if(!name){toast('Informe o nome.', 'error');return}
-  const p = state.properties.find(x=>x.id===document.getElementById('crm-property').value);
-  state.leads.push({
-    id:uid(), name,
-    phone:document.getElementById('crm-phone').value,
-    source:document.getElementById('crm-source').value,
-    property:p?p.code:'',
-    status:document.getElementById('crm-status').value,
-    value:+document.getElementById('crm-value').value||0,
-    notes:document.getElementById('crm-notes').value,
-    date:new Date().toISOString(),
-  });
-  save(); renderCRM(); renderDashboard();
-  ['crm-name','crm-phone','crm-value','crm-notes'].forEach(id=>document.getElementById(id).value='');
-  toast('Atendimento adicionado!');
-}
-function moveLead(id, newStatus){ const l = state.leads.find(x=>x.id===id); if(!l)return; l.status = newStatus; save(); renderCRM(); renderDashboard(); }
-function openLead(id){
-  const l = state.leads.find(x=>x.id===id); if(!l)return;
-  openModal(`
-    <span class="close-x" onclick="closeModal()">✕</span>
-    <h3>${l.name}</h3>
-    <p class="muted" style="margin-bottom:14px">📱 ${l.phone||'—'} · ${l.source} · 📅 ${new Date(l.date).toLocaleDateString('pt-BR')}</p>
-    <div class="field"><label>Status</label><select class="input" onchange="moveLead('${l.id}',this.value);closeModal()">${STATUSES.map(s=>`<option ${s===l.status?'selected':''}>${s}</option>`).join('')}</select></div>
-    <div class="field"><label>Imóvel</label><input class="input" value="${l.property||'—'}" readonly></div>
-    <div class="field"><label>Valor (R$)</label><input class="input" id="lead-val" type="number" value="${l.value}"></div>
-    <div class="field"><label>Observações</label><textarea class="input" id="lead-notes">${l.notes||''}</textarea></div>
-    <div style="display:flex;gap:8px">
-      <button class="btn btn-primary btn-block" onclick="updateLead('${l.id}')">💾 Salvar</button>
-      <button class="btn btn-danger" onclick="deleteLead('${l.id}')">🗑️</button>
-    </div>
-  `);
-}
-function updateLead(id){
-  const l = state.leads.find(x=>x.id===id); if(!l)return;
-  l.value = +document.getElementById('lead-val').value||0;
-  l.notes = document.getElementById('lead-notes').value;
-  save(); renderCRM(); renderDashboard(); closeModal(); toast('Atualizado!');
-}
-function deleteLead(id){
-  if(!confirm('Excluir lead?'))return;
-  state.leads = state.leads.filter(x=>x.id!==id);
-  save(); renderCRM(); renderDashboard(); closeModal(); toast('Removido.');
-}
-function renderCRM(){
-  document.getElementById('cnt-leads').textContent = state.leads.length;
-  document.getElementById('kanban').innerHTML = STATUSES.map(st=>{
-    const items = state.leads.filter(l=>l.status===st);
-    return `<div class="kcol"><h4>${st} <span>${items.length}</span></h4>
-      ${items.map(l=>`<div class="kcard" onclick="openLead('${l.id}')">
-        <div class="name">${l.name}</div>
-        <div class="info">📱 ${l.phone||'—'}</div>
-        <div class="info">🏠 ${l.property||'—'} · ${l.source}</div>
-        ${l.value?`<div class="info" style="color:var(--emerald-3);font-weight:600">${fmtBRL(l.value)}</div>`:''}
-      </div>`).join('')}
-    </div>`;
-  }).join('');
-}
-function exportLeadsCSV(){
-  if(!state.leads.length){toast('Sem leads.', 'warn');return}
-  const rows = [['Nome','Telefone','Origem','Imóvel','Status','Valor','Data','Obs']];
-  state.leads.forEach(l=>rows.push([l.name,l.phone,l.source,l.property,l.status,l.value,new Date(l.date).toLocaleDateString('pt-BR'),(l.notes||'').replace(/\n/g,' ')]));
-  downloadCSV(rows,'leads.csv');
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   DASHBOARD
-   ═══════════════════════════════════════════════════════════════ */
-function renderDashboard(){
-  const leads = state.leads;
-  const totalRevenue = leads.filter(l=>['Concretizado','Reserva'].includes(l.status)).reduce((s,l)=>s+l.value,0);
-  const concretizados = leads.filter(l=>l.status==='Concretizado');
-  const ativos = leads.filter(l=>!['Concretizado','Perdido'].includes(l.status)).length;
-  const conv = leads.length?Math.round(concretizados.length/leads.length*100):0;
-  const ticket = concretizados.length?totalRevenue/concretizados.length:0;
-  const totalRates = state.properties.reduce((s,p)=>s+(p.rates||[]).length,0);
-  document.getElementById('kpis').innerHTML = `
-    <div class="kpi"><div class="label">Imóveis</div><div class="value">${state.properties.length}</div><div class="sub">${totalRates} tarifa(s)</div></div>
-    <div class="kpi"><div class="label">Leads Ativos</div><div class="value">${ativos}</div><div class="sub">de ${leads.length}</div></div>
-    <div class="kpi"><div class="label">Receita Confirmada</div><div class="value">${fmtBRL(totalRevenue).replace('R$ ','R$<small> ')}</small></div><div class="sub">${(convertFromBRL(totalRevenue,'USD')).toFixed(0)} USD · ${(convertFromBRL(totalRevenue,'ARS')).toFixed(0)} ARS</div></div>
-    <div class="kpi"><div class="label">Ticket Médio</div><div class="value">${fmtBRL(ticket).replace('R$ ','R$<small> ')}</small></div><div class="sub">${concretizados.length} fechado(s)</div></div>
-    <div class="kpi"><div class="label">Conversão</div><div class="value">${conv}<small>%</small></div><div class="sub">leads → concretizados</div></div>
-    <div class="kpi"><div class="label">Total Leads</div><div class="value">${leads.length}</div><div class="sub">histórico completo</div></div>
-  `;
-  const alertEl = document.getElementById('alert-checkins');
-  const alerts = [];
-  const today = new Date();
-  leads.filter(l=>['Reserva','Concretizado'].includes(l.status)).forEach(l=>{
-    const noteDate = (l.notes||'').match(/(\d{2})\/(\d{2})\/(\d{4})/);
-    if(noteDate){
-      const checkin = new Date(noteDate[3],+noteDate[2]-1,+noteDate[1]);
-      const diff = Math.ceil((checkin-today)/86400000);
-      if(diff>=0 && diff<=30) alerts.push({lead:l, checkin, diff});
-    }
-  });
-  alerts.sort((a,b)=>a.diff-b.diff);
-  alertEl.innerHTML = alerts.length ? `<div class="alert-box"><div>⚠️</div><div>${alerts.slice(0,3).map(a=>`<strong>${a.lead.name}</strong> — check-in em ${a.diff} dia(s) · ${a.lead.property}`).join('<br>')}</div></div>` : '';
-
-  const origem={}; leads.forEach(l=>{origem[l.source]=(origem[l.source]||0)+l.value});
-  renderBars('chart-origem',origem,'R$');
-  const st={}; leads.forEach(l=>{st[l.status]=(st[l.status]||0)+1});
-  renderBars('chart-status',st,'');
-  const im={}; leads.forEach(l=>{if(l.property)im[l.property]=(im[l.property]||0)+l.value});
-  renderBars('chart-imovel',im,'R$');
-  const ult = leads.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)).slice(0,5);
-  document.getElementById('ultimos-leads').innerHTML = ult.length?ult.map(l=>`
-    <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border-soft)">
-      <div><div style="font-family:Montserrat;font-weight:600;color:#fff;font-size:.88rem">${l.name}</div><div class="muted" style="font-size:.75rem">${l.property||'—'} · ${l.source}</div></div>
-      <span class="badge ${statusClass(l.status)}">${l.status}</span>
-    </div>`).join(''):'<p class="muted">Sem atendimentos.</p>';
-}
-function renderBars(id, data, unit){
-  const entries = Object.entries(data).sort((a,b)=>b[1]-a[1]);
-  const max = Math.max(1,...entries.map(e=>e[1]));
-  const el = document.getElementById(id);
-  if(!entries.length){el.innerHTML='<p class="muted">Sem dados.</p>';return}
-  el.innerHTML = entries.map(([k,v])=>{
-    const pct = (v/max*100).toFixed(0);
-    return `<div class="bar-row"><div class="lbl">${k}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><div class="val">${unit==='R$'?fmtBRL(v):v}</div></div>`;
-  }).join('');
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   CONTRATO
-   ═══════════════════════════════════════════════════════════════ */
-function renderContract(){
-  const p = state.properties.find(x=>x.id===document.getElementById('ct-property').value);
-  const val = +document.getElementById('ct-value').value||0;
-  const inD = document.getElementById('ct-in').value;
-  const outD = document.getElementById('ct-out').value;
-  const n = nightsBetween(inD,outD);
-  const reserva = val*0.5, saldo = val-reserva;
-  document.getElementById('ct-preview').textContent =
-`*CONTRATO DE LOCAÇÃO POR TEMPORADA*
-
-*LOCADOR:*
-Katiucia Cachoeira — CRECI SC 70216F
-WhatsApp: (47) 99137-5505
-Instagram: @katiuciabombinhas
-
-*LOCATÁRIO:*
-Nome: ${document.getElementById('ct-name').value||'—'}
-CPF/DNI: ${document.getElementById('ct-doc').value||'—'}
-Endereço: ${document.getElementById('ct-address').value||'—'}
-Nascimento: ${fmtDateBR(document.getElementById('ct-birth').value)||'—'}
-Profissão: ${document.getElementById('ct-job').value||'—'}
-E-mail: ${document.getElementById('ct-email').value||'—'}
-
-*IMÓVEL:* ${p?`${p.code} — ${p.name}`:'—'}
-📍 ${p?p.local||'Bombinhas/SC':'—'}
-
-*PERÍODO:*
-Check-in: ${fmtDateBR(inD)||'—'} (14h)
-Check-out: ${fmtDateBR(outD)||'—'} (10h)
-🌙 ${n} noite(s)
-
-*VALORES:*
-Total: ${fmtBRL(val)}
-Reserva (50%): ${fmtBRL(reserva)}
-Saldo: ${fmtBRL(saldo)}
-
-*CONDIÇÕES:*
-1. Reserva mediante 50% via PIX ou Western Union na assinatura.
-2. Saldo no check-in, antes das chaves.
-3. Locatário responde por danos.
-4. Proibido som alto após 22h, festas e exceder capacidade.
-5. Check-in 14h, check-out 10h.
-6. Cancelamento < 15 dias: perda de 50%.
-
-Bombinhas/SC, ${new Date().toLocaleDateString('pt-BR')}
-
-_____________________________
-Katiucia Cachoeira
-
-_____________________________
-${document.getElementById('ct-name').value||'Locatário'}`;
-}
-function copyContract(){navigator.clipboard.writeText(document.getElementById('ct-preview').textContent).then(()=>toast('Copiado!'))}
-function printContract(){
-  const w = window.open('','_blank');
-  w.document.write(`<pre style="font-family:Montserrat,Arial;padding:40px;font-size:13px;line-height:1.7">${document.getElementById('ct-preview').textContent.replace(/[#*_]/g,'')}</pre>`);
-  w.document.close(); w.print();
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   CONFIGURAÇÕES
-   ═══════════════════════════════════════════════════════════════ */
-function openSettings(){
-  const s = state.settings;
-  const last = s.updatedAt ? new Date(s.updatedAt).toLocaleString('pt-BR') : 'nunca';
-  openModal(`
-    <span class="close-x" onclick="closeModal()">✕</span>
-    <h3>⚙️ Configurações</h3>
-    <p class="muted" style="margin-bottom:16px">Última atualização: <strong>${last}</strong></p>
-    <h4 style="color:var(--emerald-3);font-size:.9rem;margin-bottom:10px">💱 Cotações (quanto vale 1 unidade em R$)</h4>
-    <div class="row row-3">
-      <div class="field"><label>🇺🇸 1 USD = R$</label><input class="input" id="set-usd" type="number" step="0.01" value="${s.rates.USD}"></div>
-      <div class="field"><label>🇦🇷 1 ARS = R$</label><input class="input" id="set-ars" type="number" step="0.0001" value="${s.rates.ARS}"></div>
-      <div class="field"><label>🇪🇺 1 EUR = R$</label><input class="input" id="set-eur" type="number" step="0.01" value="${s.rates.EUR}"></div>
-    </div>
-    <h4 style="color:var(--emerald-3);font-size:.9rem;margin-bottom:10px">🌐 Idioma padrão</h4>
-    <div class="row row-2" style="margin-bottom:16px">
-      <label style="display:flex;gap:8px;align-items:center;font-size:.85rem"><input type="radio" name="set-lang" value="pt" ${s.lang==='pt'?'checked':''}> 🇧🇷 Português</label>
-      <label style="display:flex;gap:8px;align-items:center;font-size:.85rem"><input type="radio" name="set-lang" value="es" ${s.lang==='es'?'checked':''}> 🇦🇷 Español</label>
-    </div>
-    <div style="display:flex;gap:8px;margin-top:20px">
-      <button class="btn btn-primary btn-block" onclick="saveSettings()">💾 Salvar</button>
-      <button class="btn btn-ghost" onclick="fetchRates()">🔄 Buscar atual</button>
-    </div>
-  `);
-}
-function saveSettings(){
-  const usd = +document.getElementById('set-usd').value;
-  const ars = +document.getElementById('set-ars').value;
-  const eur = +document.getElementById('set-eur').value;
-  const lang = document.querySelector('input[name="set-lang"]:checked')?.value || 'pt';
-  if(usd<=0 || ars<=0 || eur<=0){toast('Cotações > zero.', 'error');return}
-  state.settings.rates = { USD:usd, ARS:ars, EUR:eur };
-  state.settings.updatedAt = new Date().toISOString();
-  state.settings.lang = lang;
-  save(); closeModal(); renderCurrencyStrip(); calcBudget(); setLang(lang);
-  toast('Cotações atualizadas!');
-}
-async function fetchRates(){
-  toast('Buscando...', 'warn');
-  try{
-    const r = await fetch('https://open.er-api.com/v6/latest/BRL');
-    const d = await r.json();
-    if(d && d.rates){
-      document.getElementById('set-usd').value = (1/d.rates.USD).toFixed(2);
-      document.getElementById('set-ars').value = (1/d.rates.ARS).toFixed(4);
-      document.getElementById('set-eur').value = (1/d.rates.EUR).toFixed(2);
-      toast('Carregadas! Revise e Salve.');
-    } else throw new Error();
-  }catch(e){ toast('Falha. Insira manualmente.', 'error'); }
-}
-function renderCurrencyStrip(){
-  const s = state.settings.rates;
-  const last = state.settings.updatedAt ? new Date(state.settings.updatedAt).toLocaleDateString('pt-BR') : '—';
-  document.getElementById('currency-strip').innerHTML = `
-    <span class="currency-chip">💱 Cotações (base R$)</span>
-    <span class="currency-chip">🇺🇸 US$ 1 = <b>R$ ${s.USD.toFixed(2)}</b></span>
-    <span class="currency-chip">🇦🇷 AR$ 1 = <b>R$ ${s.ARS.toFixed(4)}</b></span>
-    <span class="currency-chip">🇪🇺 € 1 = <b>R$ ${s.EUR.toFixed(2)}</b></span>
-    <span class="currency-chip" onclick="openSettings()">✏️ Atualizar (${last})</span>
-  `;
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   VITRINE PÚBLICA
-   ═══════════════════════════════════════════════════════════════ */
-function renderPublicVitrine(){
-  document.getElementById('stat-props').textContent = state.properties.length;
-  document.getElementById('year').textContent = new Date().getFullYear();
-  renderPublicFilters();
-  renderPublicProperties();
-}
-function renderPublicFilters(){
-  const neighborhoods = [...new Set(state.properties.map(p => p.neighborhood).filter(Boolean))].sort();
-  document.getElementById('filters-public').innerHTML = `
-    <button class="filter-chip active" onclick="filterPublic('all', this)">Todos</button>
-    ${neighborhoods.map(n => `<button class="filter-chip" onclick="filterPublic('${n}', this)">${n}</button>`).join('')}
-  `;
-}
-function filterPublic(neighborhood, btn){
-  document.querySelectorAll('#filters-public .filter-chip').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  renderPublicProperties(neighborhood === 'all' ? null : neighborhood);
-}
-function renderPublicProperties(filterNeighborhood = null){
-  const grid = document.getElementById('public-props-grid');
-  let list = state.properties.slice();
-  if(filterNeighborhood) list = list.filter(p => p.neighborhood === filterNeighborhood);
-  if(!list.length){
-    grid.innerHTML = '<p class="muted" style="grid-column:1/-1;text-align:center;padding:40px">Nenhum imóvel nesta categoria.</p>';
-    return;
-  }
-  grid.innerHTML = list.map(p => {
-    const cover = p.photo || (p.gallery && p.gallery[0]) || '';
-    return `
-      <article class="public-prop-card" onclick="openPublicProperty('${p.id}')">
-        <div class="public-prop-cover">
-          ${cover?`<img src="${cover}" alt="${p.name}" loading="lazy">`:'<div style="height:100%;display:grid;place-items:center;font-size:3rem;color:var(--muted-2)">🏠</div>'}
-          <span class="public-prop-code">${p.code}</span>
-          ${p.featured?'<span class="public-prop-feat">★ Destaque</span>':''}
-          <div class="public-prop-info">
-            <h3>${p.name}</h3>
-            <p>📍 ${p.neighborhood||''}${p.local?(' · '+p.local.split(',').slice(-1)[0].trim()):''}</p>
-          </div>
-        </div>
-        <div class="public-prop-body">
-          <p class="desc-short">${p.shortDesc || p.desc || 'Casa completa para sua temporada em Bombinhas.'}</p>
-          <div class="public-prop-features">
-            <span>👥 ${p.cap} hóspedes</span>
-            ${p.bedrooms?`<span>🛏️ ${p.bedrooms} quartos</span>`:''}
-            ${p.bathrooms?`<span>🚿 ${p.bathrooms} banheiros</span>`:''}
-          </div>
-          <div class="public-prop-actions">
-            <button class="btn btn-primary" onclick="event.stopPropagation();openPublicProperty('${p.id}')">Ver detalhes</button>
-            <button class="btn btn-wa" onclick="event.stopPropagation();openWhatsProperty('${p.code}','${p.name}','${p.neighborhood||''}')">💬 Consultar</button>
-          </div>
-        </div>
-      </article>
-    `;
-  }).join('');
-}
-function openPublicProperty(id){
-  const p = state.properties.find(x => x.id === id);
-  if(!p) return;
-  const gallery = (p.gallery && p.gallery.length) ? p.gallery : (p.photo ? [p.photo] : []);
-  const cover = gallery[0] || '';
-  openModal(`
-    <button class="close-x" onclick="closeModal()" style="position:absolute;top:14px;right:14px;z-index:10;width:38px;height:38px;border-radius:50%;background:rgba(4,20,31,.9);backdrop-filter:blur(10px);border:1px solid var(--border-soft);display:grid;place-items:center;font-size:1.1rem">✕</button>
-    <div class="pub-modal-gallery" style="margin:-24px -24px 0;border-radius:20px 20px 0 0">
-      ${cover?`<img id="pub-main-img" src="${cover}" alt="${p.name}">`:'<div style="height:100%;display:grid;place-items:center;font-size:4rem;color:var(--muted-2)">🏠</div>'}
-    </div>
-    ${gallery.length>1?`
-      <div class="pub-gallery-thumbs">
-        ${gallery.map((img,i)=>`<div class="pub-thumb ${i===0?'active':''}" onclick="changePubImage('${img}', this)"><img src="${img}" alt="Foto ${i+1}"></div>`).join('')}
-      </div>
-    `:''}
-    <div style="padding:6px 0 0">
-      <div class="badge b-ok" style="margin-bottom:10px">${p.code}</div>
-      <h2 style="font-size:1.5rem;color:#fff;margin-bottom:6px">${p.name}</h2>
-      <p class="muted" style="margin-bottom:18px">📍 ${p.local || p.neighborhood || 'Bombinhas/SC'}</p>
-      <div class="row row-4" style="margin-bottom:20px">
-        <div class="kpi"><div class="label">Hóspedes</div><div class="value" style="font-size:1.2rem">${p.cap}</div></div>
-        <div class="kpi"><div class="label">Quartos</div><div class="value" style="font-size:1.2rem">${p.bedrooms||'—'}</div></div>
-        <div class="kpi"><div class="label">Banheiros</div><div class="value" style="font-size:1.2rem">${p.bathrooms||'—'}</div></div>
-        <div class="kpi"><div class="label">Garagem</div><div class="value" style="font-size:1.2rem">${p.parking||'—'}</div></div>
-      </div>
-      ${p.longDesc||p.desc?`<h3 style="font-size:.95rem;color:#fff;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:14px;background:linear-gradient(180deg,#10b981,#06b6d4);border-radius:2px"></span>Sobre a casa</h3><p class="muted" style="font-size:.9rem;line-height:1.75;margin-bottom:20px">${p.longDesc||p.desc}</p>`:''}
-      ${(p.amenities||[]).length?`
-        <h3 style="font-size:.95rem;color:#fff;margin-bottom:10px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:14px;background:linear-gradient(180deg,#10b981,#06b6d4);border-radius:2px"></span>Comodidades</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-bottom:20px">
-          ${p.amenities.map(a=>`<div style="display:flex;gap:8px;padding:8px 12px;border-radius:8px;background:rgba(2,15,25,.5);border:1px solid var(--border-soft);font-size:.82rem;color:var(--muted)">✓ ${a}</div>`).join('')}
-        </div>
-      `:''}
-      <div style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(6,182,212,.12));border:1px solid var(--border);border-radius:14px;padding:20px;margin-top:14px">
-        <strong style="display:block;font-family:Montserrat;color:#fff;margin-bottom:6px">Quer saber a disponibilidade?</strong>
-        <span class="muted" style="font-size:.85rem;display:block;margin-bottom:14px">Fale comigo no WhatsApp e eu te envio datas e valores.</span>
-        <button class="btn btn-wa btn-block" onclick="openWhatsProperty('${p.code}','${p.name}','${p.neighborhood||''}')">💬 Consultar disponibilidade</button>
-      </div>
-    </div>
-  `);
-}
-function changePubImage(src, thumbEl){
-  const img = document.getElementById('pub-main-img');
-  if(img) img.src = src;
-  document.querySelectorAll('.pub-thumb').forEach(t=>t.classList.remove('active'));
-  thumbEl.classList.add('active');
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   WHATSAPP
-   ═══════════════════════════════════════════════════════════════ */
-function openWhatsGeneral(e){
-  if(e) e.preventDefault();
-  const msg = `Olá Katiucia! Vim pelo site BombinhasTemporada.com.br e gostaria de saber mais sobre as casas de temporada. 😊`;
-  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
-}
-function openWhatsProperty(code, name, neighborhood){
-  const msg = `Olá Katiucia! Vim pelo site e gostaria de consultar a disponibilidade da *${name}* (${code})${neighborhood?` em ${neighborhood}`:''}. Poderia me informar datas livres e valores? 😊`;
-  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   MODAL GENÉRICO
-   ═══════════════════════════════════════════════════════════════ */
-function openModal(html){
-  document.getElementById('modal-content').innerHTML = html;
-  document.getElementById('modal-bg').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal(){
-  document.getElementById('modal-bg').classList.add('hidden');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
-
-/* ═══════════════════════════════════════════════════════════════
-   BACKUP / CSV / BUSCA
-   ═══════════════════════════════════════════════════════════════ */
-function exportBackup(){
-  const data = JSON.stringify(state, null, 2);
-  const blob = new Blob([data], {type:'application/json'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url; a.download = `bombinhas_backup_${todayISO()}.json`; a.click();
-  URL.revokeObjectURL(url); toast('Backup exportado!');
-}
-function importBackup(){document.getElementById('file-input').click()}
-function handleImportFile(e){
-  const file = e.target.files[0]; if(!file) return;
-  const reader = new FileReader();
-  reader.onload = ev => {
-    try{
-      const d = JSON.parse(ev.target.result);
-      if(!d.properties){toast('Arquivo inválido.', 'error');return}
-      if(!confirm('Substituir todos os dados?')) return;
-      state = Object.assign({properties:[],leads:[],blocked:{},calMonth:new Date(),settings:state.settings}, d);
-      state.calMonth = new Date(state.calMonth||Date.now());
-      save(); renderAll(); renderPublicVitrine(); toast('Importado!');
-    }catch(err){toast('Erro.', 'error')}
-  };
-  reader.readAsText(file); e.target.value='';
-}
-function downloadCSV(rows, filename){
-  const csv = rows.map(r=>r.map(c=>`"${String(c==null?'':c).replace(/"/g,'""')}"`).join(',')).join('\n');
-  const blob = new Blob(['\ufeff'+csv], {type:'text/csv;charset=utf-8'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); a.href = url; a.download = filename; a.click();
-  URL.revokeObjectURL(url); toast('CSV exportado!');
-}
-function globalSearch(q){
-  q = q.toLowerCase().trim(); if(!q) return;
-  document.querySelector('[data-tab=imoveis]').click();
-  setTimeout(()=>{const el=document.getElementById('filter-props'); if(el){el.value=q;renderProperties();}}, 50);
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   INIT
-   ═══════════════════════════════════════════════════════════════ */
-function renderAll(){
-  renderCurrencyStrip();
-  populateSelects();
-  renderProperties();
-  renderRates();
-  renderCalendar();
-  renderCRM();
-  renderDashboard();
-  calcBudget();
-  renderContract();
-  document.querySelectorAll('#lang-toggle button').forEach(b=>b.classList.toggle('active', b.dataset.lang===state.settings.lang));
-}
-load();
-renderAll();
-renderPublicVitrine();
-
-// Restaura modo anterior
-const savedMode = localStorage.getItem(LS_MODE) || 'public';
-if(savedMode === 'admin') setMode('admin');
-else setMode('public');
-</script>
 </body>
 </html>
